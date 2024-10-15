@@ -1,5 +1,27 @@
 <template>
-	<div id="home" class="bg-red-50 w-full h-96 scroll-mt-20">
+	<div id="home" class="bg-red-50 w-full h-96 scroll-mt-20 mb-20">
+		<Card v-animateonscroll="{ enterClass: 'animate-fadeintop', leaveClass: 'animate-fadeouttop' }" class="col-span-12 shadow-md">
+			<template #title>
+				Home
+			</template>
+			<template #content>
+				
+			</template>
+		</Card>
+	</div>
+
+	<div id="tentang-kami" class="bg-red-50 w-full h-96 scroll-mt-20 my-20">
+		<Card v-animateonscroll="{ enterClass: 'animate-fadeintop', leaveClass: 'animate-fadeouttop' }" class="col-span-12 shadow-md">
+			<template #title>
+				Tentang Kami
+			</template>
+			<template #content>
+				
+			</template>
+		</Card>
+	</div>
+
+	<div id="produk" class="bg-red-50 w-full h-96 scroll-mt-20 my-20">
 		<Card v-animateonscroll="{ enterClass: 'animate-fadeintop', leaveClass: 'animate-fadeouttop' }" class="col-span-12 shadow-md">
 			<template #title>
 				Testtt
@@ -10,29 +32,11 @@
 		</Card>
 	</div>
 
-	<div id="tentang-kami" class="bg-red-50 w-full h-96 scroll-mt-20">
-		<Card v-animateonscroll="{ enterClass: 'animate-fadeintop', leaveClass: 'animate-fadeouttop' }" class="col-span-12 shadow-md">
-			<template #title>
-				Testtt
-			</template>
-			<template #content>
-				
-			</template>
-		</Card>
-	</div>
-
-	<div id="produk" class="bg-red-50 w-full h-96 scroll-mt-20">
-		<Card v-animateonscroll="{ enterClass: 'animate-fadeintop', leaveClass: 'animate-fadeouttop' }" class="col-span-12 shadow-md">
-			<template #title>
-				Testtt
-			</template>
-			<template #content>
-				
-			</template>
-		</Card>
-	</div>
-
-	<div id="testimoni" class="bg-white w-full h-96 scroll-mt-20">
+	<div id="testimoni" class="bg-white w-full h-96 scroll-mt-20 my-20">
+        <div class="text-center mb-10">
+            <h3 class="font-bold text-2xl">Title Lorem, ipsum dolor.</h3>
+            <p>Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, eaque.</p>
+        </div>
 		<Carousel :value="products" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" circular :autoplayInterval="3000">
 			<template #item="slotProps">
 				<div class="bg-white border border-surface-200 dark:border-surface-700 rounded m-2  p-4">
@@ -56,7 +60,7 @@
 		</Carousel>
 	</div>
 
-	<div id="daftar" class="bg-red-50 w-full h-96 scroll-mt-20">
+	<div id="daftar" class="bg-red-50 w-full h-96 scroll-mt-20 my-20">
 		<Card v-animateonscroll="{ enterClass: 'animate-fadeintop', leaveClass: 'animate-fadeouttop' }" class="col-span-12 shadow-md">
 			<template #title>
 				Testtt
@@ -137,7 +141,7 @@ export default {
                 },
                 {
                     breakpoint: '1199px',
-                    numVisible: 3,
+                    numVisible: 2,
                     numScroll: 1
                 },
                 {

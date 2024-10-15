@@ -3,11 +3,9 @@
     <ConfirmDialog class="lg:hidden" group="dialog" />
     <Toast class="max-lg:hidden"></Toast>
 
-    <div class="bg-[#F8F9FA]">
-        <Content>
-            <RouterView></RouterView>
-        </Content>
-    </div>
+    <Content>
+        <RouterView></RouterView>
+    </Content>
 
     <ScrollTop />
 </template>

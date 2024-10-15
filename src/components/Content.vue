@@ -3,7 +3,7 @@
 
 	<Navbar :navItems="navItems" />
 
-	<div class="w-full lg:w-[1280px] relative top-20 mx-auto">
+	<div class="max-w-full lg:max-w-[1280px] relative top-20 mx-auto h-full">
 		<RouterView></RouterView>
 	</div>
 </template>
