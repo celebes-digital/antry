@@ -1,5 +1,5 @@
 <template>
-	<div id="home" class="bg-red-50 w-full h-96 scroll-mt-20 mb-20">
+	<section id="home" class="bg-red-50 w-full h-96 scroll-mt-20 mb-20">
 		<Card v-animateonscroll="{ enterClass: 'animate-fadeintop', leaveClass: 'animate-fadeouttop' }" class="col-span-12 shadow-md">
 			<template #title>
 				Home
@@ -8,9 +8,9 @@
 				
 			</template>
 		</Card>
-	</div>
+	</section>
 
-	<div id="tentang-kami" class="bg-red-50 w-full h-96 scroll-mt-20 my-20">
+	<section id="tentang-kami" class="bg-red-50 w-full h-96 scroll-mt-20 my-20">
 		<Card v-animateonscroll="{ enterClass: 'animate-fadeintop', leaveClass: 'animate-fadeouttop' }" class="col-span-12 shadow-md">
 			<template #title>
 				Tentang Kami
@@ -19,9 +19,9 @@
 				
 			</template>
 		</Card>
-	</div>
+	</section>
 
-	<div id="produk" class="bg-red-50 w-full h-96 scroll-mt-20 my-20">
+	<section id="produk" class="bg-red-50 w-full h-96 scroll-mt-20 my-20">
 		<Card v-animateonscroll="{ enterClass: 'animate-fadeintop', leaveClass: 'animate-fadeouttop' }" class="col-span-12 shadow-md">
 			<template #title>
 				Testtt
@@ -30,9 +30,9 @@
 				
 			</template>
 		</Card>
-	</div>
+	</section>
 
-	<div id="testimoni" class="bg-white w-full h-96 scroll-mt-20 my-20">
+	<section id="testimoni" class="bg-white w-full h-96 scroll-mt-20 my-20">
         <div class="text-center mb-10">
             <h3 class="font-bold text-2xl">Title Lorem, ipsum dolor.</h3>
             <p>Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, eaque.</p>
@@ -58,9 +58,9 @@
 				</div>
 			</template>
 		</Carousel>
-	</div>
+	</section>
 
-	<div id="daftar" class="bg-red-50 w-full h-96 scroll-mt-20 my-20">
+	<section id="daftar" class="bg-red-50 w-full h-96 scroll-mt-20 my-20">
 		<Card v-animateonscroll="{ enterClass: 'animate-fadeintop', leaveClass: 'animate-fadeouttop' }" class="col-span-12 shadow-md">
 			<template #title>
 				Testtt
@@ -69,7 +69,7 @@
 				
 			</template>
 		</Card>
-	</div>
+	</section>
 </template>
 
 <script>
