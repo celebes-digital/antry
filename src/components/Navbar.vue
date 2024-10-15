@@ -17,7 +17,7 @@
 		</div>
 
 		<div class="flex">
-			<a href="#daftar" class="bg-orange-500 p-4 rounded-full text-white text-center border-2 border-white hover:bg-white hover:border-orange-500 hover:text-orange-500 ease-in-out transition-all">Daftar Sebagai Mitra</a>
+			<a href="#daftar" class="bg-orange-500 p-4 hidden lg:flex rounded-full text-white text-center border-2 border-white hover:bg-white hover:border-orange-500 hover:text-orange-500 ease-in-out transition-all">Daftar Sebagai Mitra</a>
 			<Button class="flex lg:hidden" icon="pi pi-bars" @click="openPosition('topright')"  />
 		</div>
 	</nav>
