@@ -1,0 +1,495 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "nama": "Arrayyan",
+      "no_telp": "6285157879722",
+      "no_telp_darurat": "6285157879722",
+      "foto": "reza.png",
+      "tanggal_lahir": "30/10/2005",
+      "alamat": "JL. Pendidikan Blok B5 No. 8"
+    },
+    {
+      "nama": "shiori",
+      "alamat": "dvxdv",
+      "tanggal_lahir": "2024-09-01T16:00:00.000Z",
+      "no_telp": "2412-3536-4564",
+      "no_telp_darurat": "2412-3536-4564",
+      "id": 2
+    },
+    {
+      "nama": "Perdi",
+      "alamat": "Jl Andi Djemma",
+      "tanggal_lahir": "2005-10-29T16:00:00.000Z",
+      "no_telp": "085157879722",
+      "no_telp_darurat": "085157879722",
+      "id": 3
+    },
+    {
+      "nama": "Ibam",
+      "alamat": "jl hartako",
+      "tanggal_lahir": "2018-05-01T16:00:00.000Z",
+      "no_telp": "085157879722",
+      "no_telp_darurat": "085157879722",
+      "id": 4
+    },
+    {
+      "nama": "dasffdas",
+      "alamat": "fadsfdas",
+      "tanggal_lahir": "2024-09-10T16:00:00.000Z",
+      "no_telp": "23423423",
+      "no_telp_darurat": "23423423",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "workspaces": {
+    "absensi": [
+      {
+        "frontend": {
+          "todo": [
+            {
+              "id": 1,
+              "nama": "Membuat layout",
+              "deskripsi": null,
+              "deadline": "2024/09/11",
+              "check_list": [
+                {
+                  "nama": "Navbar",
+                  "selesai": false,
+                  "id_checklist": 1
+                },
+                {
+                  "nama": "Sidebar",
+                  "selesai": false,
+                  "id_checklist": 2
+                },
+                {
+                  "nama": "wrapper content",
+                  "selesai": false,
+                  "id_checklist": 3
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "nama": "Membuat menu pegawai (CRUD)",
+              "deskripsi": null,
+              "deadline": null,
+              "check_list": [
+                {
+                  "nama": "tambah pegawai",
+                  "selesai": false,
+                  "id_checklist": 4
+                },
+                {
+                  "nama": "edit pegawai",
+                  "selesai": false,
+                  "id_checklist": 5
+                },
+                {
+                  "nama": "hapus pegawai",
+                  "selesai": false,
+                  "id_checklist": 6
+                },
+                {
+                  "nama": "gaji pegawai",
+                  "selesai": false,
+                  "id_checklist": 7
+                }
+              ]
+            }
+          ],
+          "in_progress": [
+            {
+              "id": 1,
+              "nama": "Membuat Kanban",
+              "deskripsi": "ya begitulah",
+              "deadline": "2024/09/11",
+              "check_list": null
+            }
+          ],
+          "in_review": [
+            {
+              "id": 1,
+              "nama": "auth",
+              "deskripsi": "ya begitulah",
+              "deadline": "2024/09/11",
+              "check_list": null
+            }
+          ],
+          "done": [
+            {
+              "id": 1,
+              "nama": "auth",
+              "deskripsi": "ya begitulah",
+              "deadline": "2024/09/11",
+              "check_list": null
+            }
+          ]
+        },
+        "backend": {
+          "todo": [
+            {
+              "id": 1,
+              "nama": "Membuat layout",
+              "deskripsi": null,
+              "deadline": "2024/09/11",
+              "check_list": [
+                {
+                  "nama": "Navbar",
+                  "selesai": false,
+                  "id_checklist": 8
+                },
+                {
+                  "nama": "Sidebar",
+                  "selesai": false,
+                  "id_checklist": 9
+                },
+                {
+                  "nama": "wrapper content",
+                  "selesai": false,
+                  "id_checklist": 10
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "nama": "Membuat menu pegawai (CRUD)",
+              "deskripsi": null,
+              "deadline": null,
+              "check_list": [
+                {
+                  "nama": "tambah pegawai",
+                  "selesai": false,
+                  "id_checklist": 11
+                },
+                {
+                  "nama": "edit pegawai",
+                  "selesai": false,
+                  "id_checklist": 12
+                },
+                {
+                  "nama": "hapus pegawai",
+                  "selesai": false,
+                  "id_checklist": 13
+                },
+                {
+                  "nama": "gaji pegawai",
+                  "selesai": false,
+                  "id_checklist": 14
+                }
+              ]
+            }
+          ],
+          "in_progress": [
+            {
+              "id": 1,
+              "nama": "Membuat Kanban",
+              "deskripsi": "ya begitulah",
+              "deadline": "2024/09/11",
+              "check_list": null
+            }
+          ],
+          "in_review": [
+            {
+              "id": 1,
+              "nama": "auth",
+              "deskripsi": "ya begitulah",
+              "deadline": "2024/09/11",
+              "check_list": null
+            }
+          ],
+          "done": [
+            {
+              "id": 1,
+              "nama": "auth",
+              "deskripsi": "ya begitulah",
+              "deadline": "2024/09/11",
+              "check_list": null
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "frontend": {
+    "todo": [
+      {
+        "id": 1,
+        "nama": "Membuat Kanban",
+        "deskripsi": "Bismillah",
+        "deadline": "2024/09/11",
+        "check_list": null
+      },
+      {
+        "id": 1,
+        "nama": "Membuat layout",
+        "deskripsi": null,
+        "deadline": "2024/09/11",
+        "check_list": [
+          {
+            "nama": "Navbar",
+            "selesai": false,
+            "id_checklist": 1
+          },
+          {
+            "nama": "Sidebar",
+            "selesai": false,
+            "id_checklist": 2
+          },
+          {
+            "nama": "wrapper content",
+            "selesai": false,
+            "id_checklist": 3
+          }
+        ]
+      }
+    ],
+    "in_progress": [
+      {
+        "id": 2,
+        "nama": "Membuat menu pegawai (CRUD)",
+        "deskripsi": null,
+        "deadline": null,
+        "check_list": [
+          {
+            "nama": "tambah pegawai",
+            "selesai": false,
+            "id_checklist": 4
+          },
+          {
+            "nama": "edit pegawai",
+            "selesai": false,
+            "id_checklist": 5
+          },
+          {
+            "nama": "hapus pegawai",
+            "selesai": false,
+            "id_checklist": 6
+          },
+          {
+            "nama": "gaji pegawai",
+            "selesai": false,
+            "id_checklist": 7
+          }
+        ]
+      }
+    ],
+    "in_review": [
+      {
+        "id": 1,
+        "nama": "layout",
+        "deskripsi": "daftar layout",
+        "deadline": "2024/09/11",
+        "check_list": null
+      }
+    ],
+    "done": [
+      {
+        "id": 1,
+        "nama": "auth",
+        "deskripsi": "ya begitulah",
+        "deadline": "2024/09/11",
+        "check_list": null
+      }
+    ]
+  },
+  "backend": {
+    "todo": [
+      {
+        "id": 1,
+        "nama": "Membuat layout",
+        "deskripsi": null,
+        "deadline": "2024/09/11",
+        "check_list": [
+          {
+            "nama": "Navbar",
+            "selesai": false,
+            "id_checklist": 8
+          },
+          {
+            "nama": "Sidebar",
+            "selesai": false,
+            "id_checklist": 9
+          },
+          {
+            "nama": "wrapper content",
+            "selesai": false,
+            "id_checklist": 10
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "nama": "Membuat menu pegawai (CRUD)",
+        "deskripsi": null,
+        "deadline": null,
+        "check_list": [
+          {
+            "nama": "tambah pegawai",
+            "selesai": false,
+            "id_checklist": 11
+          },
+          {
+            "nama": "edit pegawai",
+            "selesai": false,
+            "id_checklist": 12
+          },
+          {
+            "nama": "hapus pegawai",
+            "selesai": false,
+            "id_checklist": 13
+          },
+          {
+            "nama": "gaji pegawai",
+            "selesai": false,
+            "id_checklist": 14
+          }
+        ]
+      }
+    ],
+    "in_progress": [
+      {
+        "id": 1,
+        "nama": "Membuat Kanban",
+        "deskripsi": "ya begitulah",
+        "deadline": "2024/09/11",
+        "check_list": null
+      }
+    ],
+    "in_review": [
+      {
+        "id": 1,
+        "nama": "auth",
+        "deskripsi": "ya begitulah",
+        "deadline": "2024/09/11",
+        "check_list": null
+      }
+    ],
+    "done": [
+      {
+        "id": 1,
+        "nama": "auth",
+        "deskripsi": "ya begitulah",
+        "deadline": "2024/09/11",
+        "check_list": null
+      }
+    ]
+  },
+  "kanban": {
+    "todo": [
+      {
+        "id": 2,
+        "nama": "Membuat menu pegawai (CRUD)",
+        "deskripsi": null,
+        "deadline": null,
+        "check_list": [
+          {
+            "nama": "tambah pegawai",
+            "selesai": false,
+            "id_checklist": 4
+          },
+          {
+            "nama": "edit pegawai",
+            "selesai": false,
+            "id_checklist": 5
+          },
+          {
+            "nama": "hapus pegawai",
+            "selesai": false,
+            "id_checklist": 6
+          },
+          {
+            "nama": "gaji pegawai",
+            "selesai": false,
+            "id_checklist": 7
+          }
+        ]
+      }
+    ],
+    "in_progress": [
+      {
+        "id": 1,
+        "nama": "Membuat Kanban",
+        "deskripsi": "Bismillah",
+        "deadline": "2024/09/11",
+        "check_list": null
+      },
+      {
+        "id": 1,
+        "nama": "Membuat layout",
+        "deskripsi": null,
+        "deadline": "2024/09/11",
+        "check_list": [
+          {
+            "nama": "Navbar",
+            "selesai": false,
+            "id_checklist": 1
+          },
+          {
+            "nama": "Sidebar",
+            "selesai": false,
+            "id_checklist": 2
+          },
+          {
+            "nama": "wrapper content",
+            "selesai": false,
+            "id_checklist": 3
+          }
+        ]
+      }
+    ],
+    "in_review": [
+      {
+        "id": 1,
+        "nama": "layout",
+        "deskripsi": "daftar layout",
+        "deadline": "2024/09/11",
+        "check_list": null
+      }
+    ],
+    "done": [
+      {
+        "id": 1,
+        "nama": "auth",
+        "deskripsi": "ya begitulah",
+        "deadline": "2024/09/11",
+        "check_list": null
+      }
+    ]
+  },
+  "users": [
+    {
+      "id": 1,
+      "email": "muh.mahatma@gmail.com",
+      "password": "@123456@",
+      "avatar": "admin.jpg",
+      "last_active": "2024-09-12T12:34:56",
+      "is_admin": 1,
+      "remember_token": null,
+      "created_at": "2024-09-01T08:00:00",
+      "updated_at": "2024-09-12T08:30:00"
+    },
+    {
+      "id": 2,
+      "email": "mahatmaaa3010@gmail.com",
+      "password": "@123456@",
+      "avatar": "user.jpg",
+      "last_active": "2024-09-12T12:34:55",
+      "is_admin": 0,
+      "remember_token": null,
+      "created_at": "2024-09-01T08:00:00",
+      "updated_at": "2024-09-12T08:30:00"
+    }
+  ]
+}
