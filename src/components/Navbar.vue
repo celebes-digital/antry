@@ -2,7 +2,7 @@
 
 	<nav class="z-40 h-20 w-full fixed p-5 lg:px-20 flex justify-between items-center shadow-md bg-white transition-all ease-in-out">
 		<a href="#home">
-			<img class="h-20 w-20" src="../assets/logo-antry.jpeg" alt="Logo Antry">
+			<img class="h-20 w-20" src="../assets/logoantry.png" alt="Logo Antry">
 		</a>
 
 		<div class="hidden lg:flex gap-10">
@@ -46,12 +46,12 @@
 export default {
     name: 'Navbar',
     props: {
-        navItems: Array,
+		navItems: Array,
     },
     data() {
         return {
-            position: 'center',
-            visible: false
+			position: 'center',
+			visible: false
         };
     },
     methods: {
@@ -60,7 +60,7 @@ export default {
             this.visible = true;
         },
         closeDialog() {
-            this.visible = false;  // Close the dialog when a link is clicked
+            this.visible = false;
         }
     }
 }

@@ -3,16 +3,42 @@
     <ConfirmDialog class="lg:hidden" group="dialog" />
     <Toast class="max-lg:hidden"></Toast>
 
-    <Container>
+	<Navbar :navItems="navItems" />
+    
+    <main class="relative top-20">
         <RouterView></RouterView>
-    </Container>
+        
+        <Footer :navItems="navItems" />
+    </main>
 
     <ScrollTop />
 </template>
 
 <script>
 export default {
-    name: 'App'
+    name: 'App',
+    data() {
+        return {
+			navItems: [
+				{
+					label: 'Home',
+					to: '#home'
+				},
+				{
+					label: 'Tentang Kami',
+					to: '#tentang-kami'
+				},
+				{
+					label: 'Produk',
+					to: '#produk'
+				},
+				{
+					label: 'Testimoni',
+					to: '#testimoni'
+				},
+			]
+        }
+    }
 }
 </script>
 
