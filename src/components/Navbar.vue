@@ -22,6 +22,7 @@
 		</div>
 	</nav>
 
+	<!-- Dialog for smaller screens -->
 	<Dialog v-model:visible="visible" header="Menu Navigasi" :style="{ width: '25rem', height: '100%', maxHeight: '100%', margin: '0', border: '0' }" :position="position" :modal="true" :draggable="false" class="rounded-none">
 		<div class="flex flex-col justify-between h-full">
 			<div class="flex flex-col gap-4 ">
@@ -30,12 +31,12 @@
 					:key="item.label" 
 					:href="item.to"
 					class="duration-300 ease-in-out transition-all hover:bg-orange-50 hover:text-orange-500 text-center py-5 rounded-md"
+					@click="closeDialog"
 				>
 					{{ item.label }}
 				</a>
-				<a href="#daftar" class="bg-orange-500 p-5 rounded-full text-white text-center border-2 border-white hover:bg-white hover:border-orange-500 hover:text-orange-500 ease-in-out transition-all">Daftar Sebagai Mitra</a>
+				<a href="#daftar" class="bg-orange-500 p-5 rounded-full text-white text-center border-2 border-white hover:bg-white hover:border-orange-500 hover:text-orange-500 ease-in-out transition-all" @click="closeDialog">Daftar Sebagai Mitra</a>
 			</div>
-
 		</div>
 	</Dialog>
 
@@ -43,10 +44,10 @@
 
 <script>
 export default {
-	name:'Navbar',
-	props: {
-		navItems: Array,
-	},
+    name: 'Navbar',
+    props: {
+        navItems: Array,
+    },
     data() {
         return {
             position: 'center',
@@ -57,14 +58,10 @@ export default {
         openPosition(position) {
             this.position = position;
             this.visible = true;
+        },
+        closeDialog() {
+            this.visible = false;  // Close the dialog when a link is clicked
         }
     }
 }
 </script>
-
-<style scoped>
-.router-link-exact-active {
-	color: orange;
-	font-weight: bold;
-}
-</style>
