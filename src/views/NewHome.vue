@@ -85,6 +85,17 @@
             </Carousel>
         </section>
 
+        <section id="testimoni">
+            <SectionTitle title="Apa Keuntungan Bergabung Menjadi Member ANTRY" subTitle="Hal yang paling penting bagi setiap calon member ANTRY pasti bertanya apasih keuntungan bergabung menjadi Mitra ANTRY?" />
+
+            <div class="grid grid-cols-2">
+                <div v-for="item in memberItems" :key="item.title" class="col-auto">
+                    <h4>{{ item.title }}</h4>
+                    <p>{{ item.description }}</p>
+                </div>
+            </div>
+        </section>
+
     </Container>
 </template>
 
@@ -226,24 +237,31 @@ export default {
                 { image: 'testimoni-7.jpg' },
                 { image: 'testimoni-8.jpg' },
             ],
+            memberItems: [
+                {
+                    title: '1. Semua Produk ANTRY sudah Terdaftar dan memiliki Izin Edar atau BPOM',
+                    description: 'Apa yang menjadi pertimbangan utama kalian dalam membeli suatu produk perawatan? mungkin salah satunya adalah apakah produk tersebut sudah BPOM atau tidak, karena jika sudah BPOM artinya produk tersebut sudah aman untuk di gunakan. Sama halnya dengan semua Produk ANTRY yang sudah BPOM, sehingga akan meningkatkan rasa yakin komsumen bahwasanya produk ANTRY memang sudah layak digunakan, jadi pastinya pembeli tidak akan ragu lagi untuk  membeli produk ANTRY.',
+                },
+                {
+                    title: '2. Terbukti dengan Banyaknya Testimoni',
+                    description: 'Kenapa produk ANTRY bisa laku keras dipasaran? Pasti salah satu penyebabnya adalah testimoni pengguna ANTRY yang membuktikan bahwasanya produk ANTRY memang ampuh dalam mengatasi masalah bau badan penggunanya.',
+                },
+                {
+                    title: '3. Produk ANTRY Sudah Terkenal',
+                    description: 'Produk ANTRY telah dikenal untuk wilayah Indonesia akan kualitasnya yang memang terbukti ampuh, dan bukan hanya dalam negeri saja Produk ANTRY terkenal, tapi juga sampai ke Negara tetangga, dan kami juga memiliki Mitra untuk yang berdomisili diluar Negeri.',
+                },
+                {
+                    title: '4. Reward Produk',
+                    description: 'Seperti yang telah kami tuliskan di atas bahwasanya Produk ANTRY punya reaward kepada Mitra yang tergabung menjadi member ANTRY dalam jumlah paket tertentu, yang bikin member semakin untung.',
+                },
+                {
+                    title: '5. ID Card Member Resmi',
+                    description: 'Untuk kalian yang telah tergabung menjadi member resmi akan mendapatkan ID Card yang menandakan kalian adalah member kami, sehingga menjamin kepercayaan calon kostumer.',
+                },
+            ]
         };
     },
     methods: {
-        getSeverity(status) {
-            switch (status) {
-                case 'INSTOCK':
-                    return 'success';
-
-                case 'LOWSTOCK':
-                    return 'warn';
-
-                case 'OUTOFSTOCK':
-                    return 'danger';
-
-                default:
-                    return null;
-            }
-        }
     }
 }
 </script>
