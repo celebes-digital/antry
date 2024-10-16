@@ -1,38 +1,17 @@
 <template>
-	<section id="home" class="bg-red-50 w-full h-96 scroll-mt-20 mb-20">
-		<Card v-animateonscroll="{ enterClass: 'animate-fadeintop', leaveClass: 'animate-fadeouttop' }" class="col-span-12 shadow-md">
-			<template #title>
-				Home
-			</template>
-			<template #content>
-				
-			</template>
-		</Card>
+	<section id="home" class="bg-red-50 w-full scroll-mt-20 mb-20">
+        <Image src="/src/assets/antry-deodorant-spray-ketiak.jpg" alt="Image" width="100%" />
 	</section>
 
-	<section id="tentang-kami" class="bg-red-50 w-full h-96 scroll-mt-20 my-20">
-		<Card v-animateonscroll="{ enterClass: 'animate-fadeintop', leaveClass: 'animate-fadeouttop' }" class="col-span-12 shadow-md">
-			<template #title>
-				Tentang Kami
-			</template>
-			<template #content>
-				
-			</template>
-		</Card>
+	<section id="tentang-kami" class="bg-red-50 w-full scroll-mt-20 my-20">
+        <Image src="/src/assets/manfaat-antry-deo-spray.jpg" alt="Image" width="100%" />
 	</section>
 
-	<section id="produk" class="bg-red-50 w-full h-96 scroll-mt-20 my-20">
-		<Card v-animateonscroll="{ enterClass: 'animate-fadeintop', leaveClass: 'animate-fadeouttop' }" class="col-span-12 shadow-md">
-			<template #title>
-				Testtt
-			</template>
-			<template #content>
-				
-			</template>
-		</Card>
+	<section id="produk" class="bg-red-50 w-full scroll-mt-20 my-20">
+        <Image src="/src/assets/komposisi.jpg" alt="Image" width="100%" />
 	</section>
 
-	<section id="testimoni" class="bg-white w-full h-96 scroll-mt-20 my-20">
+	<section id="testimoni" class="bg-white w-full scroll-mt-20 my-20">
         <div class="text-center mb-10">
             <h3 class="font-bold text-2xl">Title Lorem, ipsum dolor.</h3>
             <p>Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, eaque.</p>
@@ -61,14 +40,7 @@
 	</section>
 
 	<section id="daftar" class="bg-red-50 w-full h-96 scroll-mt-20 my-20">
-		<Card v-animateonscroll="{ enterClass: 'animate-fadeintop', leaveClass: 'animate-fadeouttop' }" class="col-span-12 shadow-md">
-			<template #title>
-				Testtt
-			</template>
-			<template #content>
-				
-			</template>
-		</Card>
+        <Image src="/src/assets/gabung-mitra.jpg" alt="Image" width="100%" />
 	</section>
 </template>
 
@@ -81,25 +53,25 @@ export default {
                 {
                     name: 'Product 1',
                     price: 29.99,
-                    image: 'product1.jpg',
+                    image: 'bamboo-watch.jpg',
                     inventoryStatus: 'INSTOCK'
                 },
                 {
                     name: 'Product 2',
                     price: 19.99,
-                    image: 'product2.jpg',
+                    image: 'black-watch.jpg',
                     inventoryStatus: 'LOWSTOCK'
                 },
                 {
                     name: 'Product 3',
                     price: 49.99,
-                    image: 'product3.jpg',
+                    image: 'blue-band.jpg',
                     inventoryStatus: 'OUTOFSTOCK'
                 },
                 {
                     name: 'Product 4',
                     price: 39.99,
-                    image: 'product4.jpg',
+                    image: 'blue-t-shirt.jpg',
                     inventoryStatus: 'INSTOCK'
                 },
                 {

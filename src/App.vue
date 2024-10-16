@@ -3,9 +3,9 @@
     <ConfirmDialog class="lg:hidden" group="dialog" />
     <Toast class="max-lg:hidden"></Toast>
 
-    <Content>
+    <Container>
         <RouterView></RouterView>
-    </Content>
+    </Container>
 
     <ScrollTop />
 </template>
