@@ -1,17 +1,24 @@
 <template>
-	<section id="home" class="bg-red-50 w-full scroll-mt-20 mb-20">
-        <Image src="/src/assets/antry-deodorant-spray-ketiak.jpg" alt="Image" width="100%" />
+	<section id="home" class="bg-red-50 w-full scroll-mt-20">
+        <!-- <Image src="/src/assets/antry-deodorant-spray-ketiak.jpg" alt="Image" width="100%" /> -->
+        <Image src="https://down-id.img.susercontent.com/file/id-11134207-7r98v-luvw39ozob0c99.webp" alt="Image" width="100%" />
 	</section>
 
-	<section id="tentang-kami" class="bg-red-50 w-full scroll-mt-20 my-20">
-        <Image src="/src/assets/manfaat-antry-deo-spray.jpg" alt="Image" width="100%" />
+	<section id="manfaat" class="bg-red-50 w-full scroll-mt-20">
+        <Image src="https://down-id.img.susercontent.com/file/id-11134207-7r98t-luvw39ozsipo8a.webp" alt="Image" width="100%" />
 	</section>
 
-	<section id="produk" class="bg-red-50 w-full scroll-mt-20 my-20">
-        <Image src="/src/assets/komposisi.jpg" alt="Image" width="100%" />
+	<section id="komposisi" class="bg-red-50 w-full scroll-mt-20">
+        <!-- <Image src="/src/assets/komposisi.jpg" alt="Image" width="100%" /> -->
+        <Image src="https://down-id.img.susercontent.com/file/9c5ec159873083ca678479e0dc7e4b27.webp" alt="Image" width="100%" />
+	</section>
+    
+	<section id="testimoni" class="bg-red-50 w-full scroll-mt-20">
+        <!-- <Image src="/src/assets/komposisi.jpg" alt="Image" width="100%" /> -->
+        <Image src="https://down-id.img.susercontent.com/file/id-11134207-7r98q-luvw39ozppkse1.webp" alt="Image" width="100%" />
 	</section>
 
-	<section id="testimoni" class="bg-white w-full scroll-mt-20 my-20">
+	<!-- <section id="testimoni" class="bg-white w-full scroll-mt-20">
         <div class="text-center mb-10">
             <h3 class="font-bold text-2xl">Title Lorem, ipsum dolor.</h3>
             <p>Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, eaque.</p>
@@ -37,10 +44,11 @@
 				</div>
 			</template>
 		</Carousel>
-	</section>
+	</section> -->
 
-	<section id="daftar" class="bg-red-50 w-full h-96 scroll-mt-20 my-20">
-        <Image src="/src/assets/gabung-mitra.jpg" alt="Image" width="100%" />
+	<section id="daftar" class="bg-red-50 w-full h-96 scroll-mt-20">
+        <!-- <Image src="/src/assets/gabung-mitra.jpg" alt="Image" width="100%" /> -->
+        <Image src="https://scontent.fupg2-1.fna.fbcdn.net/v/t39.30808-6/456954384_855795649952373_4717355523071977988_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=pcGpyEpCulwQ7kNvgGxGxzo&_nc_zt=23&_nc_ht=scontent.fupg2-1.fna&_nc_gid=AOezZV9deJSNY6uh5l5hyok&oh=00_AYB3_zQXyfKUDatpCYvDHaR9IYqzTgkiQeSAtHU1ak6nrg&oe=6714D68C" alt="Image" width="100%" />
 	</section>
 </template>
 

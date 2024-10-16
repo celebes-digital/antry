@@ -19,12 +19,12 @@ export default {
 					to: '#home'
 				},
 				{
-					label: 'Tentang Kami',
-					to: '#tentang-kami'
+					label: 'Manfaat',
+					to: '#manfaat'
 				},
 				{
-					label: 'Produk',
-					to: '#produk'
+					label: 'Komposisi',
+					to: '#komposisi'
 				},
 				{
 					label: 'Testimoni',
