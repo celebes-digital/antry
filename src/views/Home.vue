@@ -22,8 +22,9 @@
         <SectionTitle title="Daftar Produk" subTitle="Beberapa Aroma Antry Deo Spray"></SectionTitle>
 		<Carousel :value="products" :numVisible="2" :numScroll="1" :responsiveOptions="responsiveOptions" circular :autoplayInterval="3000">
 			<template #item="slotProps">
-                <div class="mx-1 flex flex-col items-center">
-                    <img :src="'https://primefaces.org/cdn/primevue/images/product/' + slotProps.data.image" :alt="slotProps.data.name" class="w-[350px] h-[350px] rounded object-cover" />
+                <div class="relative mx-1 flex flex-col items-center">
+                    <img :src="slotProps.data.image" :alt="slotProps.data.name" class="w-[350px] h-[350px] rounded object-cover" />
+                    <Tag :value="slotProps.data.title" :severity="getSeverity(slotProps.data.title)" class="absolute font-semibold text-xl  " style="left:5px; top: 5px"/>
                 </div>
 			</template>
 		</Carousel>
@@ -46,17 +47,22 @@ export default {
     data() {
         return {
 			products: [
+                // https://primefaces.org/cdn/primevue/images/product/
                 {
-                    image: 'bamboo-watch.jpg',
+                    title: 'Aroma Original',
+                    image: 'https://ngorder-1.sgp1.digitaloceanspaces.com/71878/products/antry-deospray-1719044048185.jpeg',
                 },
                 {
-                    image: 'black-watch.jpg',
+                    title: 'Aroma AEESYA',
+                    image: 'https://cdn.orderonline.id/uploads/images_3897201719126537455.jpg',
                 },
                 {
-                    image: 'blue-band.jpg',
+                    title: 'Aroma AMEENA',
+                    image: 'https://cdn.orderonline.id/uploads/images_2848241719126539231.jpg',
                 },
                 {
-                    image: 'blue-t-shirt.jpg',
+                    title: 'Aroma SHAFEEA',
+                    image: 'https://cdn.orderonline.id/uploads/images_4503441719126539312.jpg',
                 },
             ],
             responsiveOptions: [
