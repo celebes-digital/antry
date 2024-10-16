@@ -73,15 +73,14 @@
             </div>
         </section>
 
-        <section id="produk">
-            <SectionTitle title="Produk-Produk Antry" subTitle="Hingga saat ini produk-produk ANTRY telah banyak tersebar diseluruh wilayah Indonesia hingga kemanca negara dan memberikan manfaat bagi seluruh penggunanya." />
+        <section id="testimoni">
+            <SectionTitle title="Testimoni Dari Klien Tercinta Kami" subTitle="Daftar testimoni dari berbagai social media dan maket place" />
 
-            <Carousel :value="products" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" circular :autoplayInterval="3000">
+            <Carousel :value="testimoniItems" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" circular :autoplayInterval="3000">
                 <template #item="slotProps">
                     <div class="mx-1 flex flex-col items-center">
-                        <img :src="slotProps.data.image" :alt="slotProps.data.title" class="w-full h-[350px] rounded object-cover" />
+                        <img :src="'/src/assets/' + slotProps.data.image" :alt="slotProps.data.image" class="w-full h-[350px] rounded object-cover" />
                     </div>
-                    <h4 class="text-[#334155]">{{ slotProps.data.title }}</h4>
                 </template>
             </Carousel>
         </section>
@@ -215,7 +214,18 @@ export default {
                     ],
                     notes: 'Catatan : Reward Plus hanya berlaku saat PO dan tidak mengurangi Reward Reguler. Reward sewaktu-waktu bisa berubah, sesuai kebijakan Manajemen ANTRY'
                 },
-            ]
+            ],
+            testimoniItems: [
+                // https://primefaces.org/cdn/primevue/images/product/
+                { image: 'testimoni-1.jpg' },
+                { image: 'testimoni-2.jpg' },
+                { image: 'testimoni-3.jpg' },
+                { image: 'testimoni-4.jpg' },
+                { image: 'testimoni-5.jpg' },
+                { image: 'testimoni-6.jpg' },
+                { image: 'testimoni-7.jpg' },
+                { image: 'testimoni-8.jpg' },
+            ],
         };
     },
     methods: {
