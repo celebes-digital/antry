@@ -32,33 +32,58 @@
         <section id="pilih-antry">
             <SectionTitle title="Pertanyaan Yang Sering Ditanyakan" subTitle="Beberapa pertanyaan yang biasa ditanyakan calon mitra kami." />
 
-            <Accordion value="0">
-                <AccordionPanel v-for="tab in tabs" :key="tab.title" :value="tab.value">
-                    <AccordionHeader>{{ tab.title }}</AccordionHeader>
-                    <AccordionContent>
-                        <p class="m-0">{{ tab.content }}</p>
-                        <ul class="list-disc list-inside">
-                            <li v-for="item in tab.list" :key="item.title">{{ item.title }}</li>
-                        </ul>
-                        <p class="m-0">{{ tab.subContent }}</p>
-                    </AccordionContent>
-                </AccordionPanel>
-            </Accordion>
+            <Card class="col-span-12 shadow-md">
+                <template #title>
+                    
+                </template>
+                <template #content>
+                    <Accordion value="0">
+                        <AccordionPanel v-for="tab in tabs" :key="tab.title" :value="tab.value">
+                            <AccordionHeader>{{ tab.title }}</AccordionHeader>
+                            <AccordionContent>
+                                <p class="m-0">{{ tab.content }}</p>
+                                <ul class="list-disc list-inside">
+                                    <li v-for="item in tab.list" :key="item.title">{{ item.title }}</li>
+                                </ul>
+                                <p class="m-0">{{ tab.subContent }}</p>
+                            </AccordionContent>
+                        </AccordionPanel>
+                    </Accordion>
+                </template>
+            </Card>
         </section>
 
         <section id="keuntungan-mitra">
             <SectionTitle title="Apa saja yang kalian dapatkan saat berbagung menjadi Mitra ANTRY?" subTitle="ANTRY juga memiliki program reward bagi semua Mitranya. Reward yang kalian bisa dapatkan tergantung dari jumlah pesanan yang kalian order. Bukan hanya itu saja, kalian juga berhak mendapatkan Reward Plus dari ANTRY sesuai dengan ketentuan yang berlaku. Berikut daftar reward dari Produk ANTRY :" />
 
-            <div class="grid grid-cols-12">
-                <Card v-for="rewardItem in rewardItems" :key="rewardItem.title" class="col-span-6 shadow-md">
+            <div class="grid grid-cols-12 gap-3">
+                <Card v-for="rewardItem in rewardItems" :key="rewardItem.title" class="col-span-12 lg:col-span-6 shadow-md">
                     <template #title>
                         {{ rewardItem.title }}
                     </template>
                     <template #content>
-                        
+                        <div class="flex flex-col justify-between h-full">
+                            <ul>
+                                <li v-for="item in rewardItem.items" :key="item.title" class="mb-2">{{ item.title }}</li>
+                            </ul>
+                            <p class="mt-5">{{ rewardItem.notes }}</p>
+                        </div>
                     </template>
                 </Card>
             </div>
+        </section>
+
+        <section id="produk">
+            <SectionTitle title="Produk-Produk Antry" subTitle="Hingga saat ini produk-produk ANTRY telah banyak tersebar diseluruh wilayah Indonesia hingga kemanca negara dan memberikan manfaat bagi seluruh penggunanya." />
+
+            <Carousel :value="products" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" circular :autoplayInterval="3000">
+                <template #item="slotProps">
+                    <div class="mx-1 flex flex-col items-center">
+                        <img :src="slotProps.data.image" :alt="slotProps.data.title" class="w-full h-[350px] rounded object-cover" />
+                    </div>
+                    <h4 class="text-[#334155]">{{ slotProps.data.title }}</h4>
+                </template>
+            </Carousel>
         </section>
 
     </Container>
@@ -157,6 +182,39 @@ export default {
                     numVisible: 1,
                     numScroll: 1
                 }
+            ],
+            rewardItems: [
+                {
+                    title: 'Reward Reguler untuk ANTRY DEO SPRAY 100 ML',
+                    items: [
+                        { title : '1. Pembelian ANTRY DEO SPRAY 100 ml sebanyak 50 Pcs mendapatkan uang senilai Rp. 50.000 ' },
+                        { title : '2. Pembelian ANTRY DEO SPRAY 100 ml sebanyak 100 Pcs mendapatkan uang senilai Rp. 100.000' },
+                        { title : '3. Pembelian ANTRY DEO SPRAY 100 ml sebanyak 500 Pcs mendapatkan uang senilai Rp. 500.000' },
+                        { title : '4. Pembelian ANTRY DEO SPRAY 100 ml sebanyak 1.000 Pcs mendapatkan uang senilai Rp. 1.000.000' },
+                        { title : '5. Pembelian ANTRY DEO SPRAY 100 ml sebanyak 5.000 Pcs mendapatkan uang senilai Rp. 5.000.000' },
+                        { title : '6. Pembelian ANTRY DEO SPRAY 100 ml sebanyak 10.000 Pcs mendapatkan uang senilai Rp. 10.000.000' },
+                        { title : '7. Pembelian ANTRY DEO SPRAY 100 ml sebanyak 50.000 Pcs mendapatkan uang senilai Rp. 50.000.000' },
+                        { title : '8. Pembelian ANTRY DEO SPRAY 100 ml sebanyak 100.000 Pcs mendapatkan uang senilai Rp. 100.000.000' },
+                        { title : 'Kalian tidak hanya mendapatkan Reward Reguler dari ANTRY loh, tapi kalian juga berhak mendapatkan Reward Plus dari ANTRY jika kalian melakukan pembelian saat Pre Order (PO) dan Reward ini hanya berlaku saat PO dibuka.' },
+                    ],
+                    notes: 'Catatan : Reward terhitung mulai dari pembelian produk sebanyak 10 Pcs dan dapat dicairkan saat pembelian mencapai 50 Pcs'
+                },
+                {
+                    title: 'Reward Plus untuk ANTRY DEO SPRAY 100 ML',
+                    items: [
+                        { title: '1. Pembelian PO ANTRY DEO SPRAY 100 ml sebanyak 300 Pcs mendapatkan uang senilai Rp. 300.000' },
+                        { title: '2. Pembelian PO ANTRY DEO SPRAY 100 ml sebanyak 1.000 Pcs mendapatkan uang senilai Rp. 1.000.000 atau Emas 1 Gr '},
+                        { title: '3. Pembelian PO ANTRY DEO SPRAY 100 ml sebanyak 3.000 Pcs mendapatkan uang senilai Rp. 2.500.000 atau Handphone Android '},
+                        { title: '4. Pembelian PO ANTRY DEO SPRAY 100 ml sebanyak 5.000 Pcs mendapatkan uang senilai Rp. 5.000.000 atau Tour Singapore- Malaysia '},
+                        { title: '5. Pembelian PO ANTRY DEO SPRAY 100 ml sebanyak 10.000 Pcs mendapatkan uang senilai Rp. 10.000.000 atau Iphone 15 '},
+                        { title: '6. Pembelian PO ANTRY DEO SPRAY 100 ml sebanyak 20.000 Pcs mendapatkan uang senilai Rp. 20.000.000 atau Sepeda Motor Matic '},
+                        { title: '7. Pembelian PO ANTRY DEO SPRAY 100 ml sebanyak 25.000 Pcs mendapatkan uang senilai Rp. 25.000.000 atau Umroh '},
+                        { title: '8. Pembelian PO ANTRY DEO SPRAY 100 ml sebanyak 50.000 Pcs mendapatkan uang senilai Rp. 50.000.000 atau Umroh Pasangan '},
+                        { title: '9. Pembelian PO ANTRY DEO SPRAY 100 ml sebanyak 100.000 Pcs mendapatkan uang senilai Rp. 100.000.000 atau Mobil '},
+
+                    ],
+                    notes: 'Catatan : Reward Plus hanya berlaku saat PO dan tidak mengurangi Reward Reguler. Reward sewaktu-waktu bisa berubah, sesuai kebijakan Manajemen ANTRY'
+                },
             ]
         };
     },
@@ -179,3 +237,12 @@ export default {
     }
 }
 </script>
+
+<style>
+.p-card-content {
+    @apply h-full
+}
+.p-card-body {
+    @apply h-full
+}
+</style>
