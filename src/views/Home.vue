@@ -8,7 +8,7 @@
                     <Button label="Daftar Sekarang" icon="pi pi-whatsapp" class="w-fit" severity="success" size="large"></Button>
                 </div>
                 <div class="col-span-12 lg:col-span-5 flex w-full justify-end order-1 lg:order-2 ">
-                    <img :src="this.default.domain + 'logoantry.png'" alt="">
+                    <img :src="this.default.domain + 'thumbnail/' + 'logoantry.png'" alt="">
                 </div>
             </div>
         </Container>
@@ -22,7 +22,7 @@
             <Carousel :value="products" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" circular :autoplayInterval="3000">
                 <template #item="slotProps">
                     <div class="mx-1 flex flex-col items-center">
-                        <img :src="this.default.domain + slotProps.data.image" :alt="slotProps.data.title" class="w-full h-[350px] rounded object-cover" />
+                        <img :src="this.default.domain + 'thumbnail/' + slotProps.data.image" :alt="slotProps.data.title" class="w-full h-[350px] rounded object-cover" />
                     </div>
                     <h4 class="text-[#334155]">{{ slotProps.data.title }}</h4>
                 </template>
@@ -79,7 +79,7 @@
             <Carousel :value="testimoniItems" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" circular :autoplayInterval="3000">
                 <template #item="slotProps">
                     <div class="mx-1 flex flex-col items-center">
-                        <img :src="this.default.domain + slotProps.data.image" :alt="slotProps.data.image" class="w-full h-[350px] rounded object-cover" />
+                        <img :src="this.default.domain + 'thumbnail/' + slotProps.data.image" :alt="slotProps.data.image" class="w-full h-[350px] rounded object-cover" />
                     </div>
                 </template>
             </Carousel>
