@@ -8,7 +8,9 @@
                     <Button label="Daftar Sekarang" icon="pi pi-whatsapp" class="w-fit" severity="success" size="large"></Button>
                 </div>
                 <div class="col-span-12 lg:col-span-5 flex w-full justify-end order-1 lg:order-2 ">
-                    <img :src="this.default.domain + 'thumbnail-' + 'logoantry.png'" alt="logo antry">
+                    <DeferredContent>
+                        <img :src="this.default.domain + 'thumbnail-' + 'logoantry.png'" alt="logo antry">
+                    </DeferredContent>
                 </div>
             </div>
         </Container>
@@ -23,7 +25,9 @@
                 <template #item="slotProps">
                     <Card class="shadow-md mx-1 mb-2 flex flex-col items-center">
                         <template #title>
-                            <img :src="this.default.domain + 'thumbnail-' + slotProps.data.image" :alt="slotProps.data.title" class="w-full h-[350px] rounded object-cover" />
+                            <DeferredContent>
+                                <img :src="this.default.domain + 'thumbnail-' + slotProps.data.image" :alt="slotProps.data.title" class="w-full h-[350px] rounded object-cover" />
+                            </DeferredContent>
                         </template>
                         <template #content>
                             <h4 class="text-gray-700">{{ slotProps.data.title }}</h4>
@@ -33,10 +37,10 @@
             </Carousel>
         </Section>
 
-        <Section sectionId="pilih-antry" class="grid grid-cols-12 items-center">
-            <SectionTitle class="col-span-12 lg:col-span-6 text-start" title="Pertanyaan Yang Sering Ditanyakan" subTitle="Beberapa pertanyaan yang biasa ditanyakan calon mitra kami." />
+        <Section sectionId="faq" class="grid grid-cols-12 items-center">
+            <SectionTitle class="col-span-12 lg:col-span-4 text-start" title="Pertanyaan Yang Sering Ditanyakan" subTitle="Beberapa pertanyaan yang biasa ditanyakan calon mitra kami." />
 
-            <Card class="col-span-12 lg:col-span-6 shadow-md">
+            <Card class="col-span-12 lg:col-span-8 shadow-md">
                 <template #title>
                     
                 </template>
@@ -85,7 +89,9 @@
                     <div class="mx-1 flex flex-col items-center">
                         <Card class="col-span-12 shadow-md mb-2 w-full">
                             <template #title>
-                                <img :src="this.default.domain + 'thumbnail-' + slotProps.data.image" :alt="slotProps.data.image" class="w-full h-[350px] rounded object-cover" />
+                                <DeferredContent>
+                                    <img :src="this.default.domain + 'thumbnail-' + slotProps.data.image" :alt="slotProps.data.image" class="w-full h-[350px] rounded object-cover" />
+                                </DeferredContent>
                             </template>
                             <template #content>
                                 
