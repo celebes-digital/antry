@@ -16,9 +16,13 @@
 
 <script>
 export default {
-    name: 'App',
-    data() {
-        return {
+	name: 'App',
+	data() {
+		return {
+			default: {
+				title: 'ANTRY OFFICIAL',
+				domain: 'https://antryofficial.com/'
+			},
 			navItems: [
 				{
 					label: 'Home',
@@ -37,8 +41,13 @@ export default {
 					to: '#testimoni'
 				},
 			]
-        }
-    }
+		}
+    },
+	provide() {
+		return {
+			default: this.default
+		};
+	}
 }
 </script>
 

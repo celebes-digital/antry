@@ -8,7 +8,7 @@
                     <Button label="Daftar Sekarang" icon="pi pi-whatsapp" class="w-fit" severity="success" size="large"></Button>
                 </div>
                 <div class="col-span-12 lg:col-span-5 flex w-full justify-end order-1 lg:order-2 ">
-                    <img src="/src/assets/logoantry.png" alt="">
+                    <img :src="this.default.domain + 'logoantry.png'" alt="">
                 </div>
             </div>
         </Container>
@@ -22,7 +22,7 @@
             <Carousel :value="products" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" circular :autoplayInterval="3000">
                 <template #item="slotProps">
                     <div class="mx-1 flex flex-col items-center">
-                        <img :src="slotProps.data.image" :alt="slotProps.data.title" class="w-full h-[350px] rounded object-cover" />
+                        <img :src="this.default.domain + slotProps.data.image" :alt="slotProps.data.title" class="w-full h-[350px] rounded object-cover" />
                     </div>
                     <h4 class="text-[#334155]">{{ slotProps.data.title }}</h4>
                 </template>
@@ -79,7 +79,7 @@
             <Carousel :value="testimoniItems" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" circular :autoplayInterval="3000">
                 <template #item="slotProps">
                     <div class="mx-1 flex flex-col items-center">
-                        <img :src="'/src/assets/' + slotProps.data.image" :alt="slotProps.data.image" class="w-full h-[350px] rounded object-cover" />
+                        <img :src="this.default.domain + slotProps.data.image" :alt="slotProps.data.image" class="w-full h-[350px] rounded object-cover" />
                     </div>
                 </template>
             </Carousel>
@@ -102,6 +102,7 @@
 <script>
 export default {
 	name:'Home',
+    inject: ['default'],
     data() {
         return {
             tabs: [
@@ -148,27 +149,27 @@ export default {
                 // https://primefaces.org/cdn/primevue/images/product/
                 {
                     title: 'ANTRY DEO SPRAY 100 ML',
-                    image: 'https://ngorder-1.sgp1.digitaloceanspaces.com/71878/products/antry-deospray-1719044048185.jpeg',
+                    image: 'antry-100ml-1.jpg',
                 },
                 {
                     title: 'ANTRY DEO SPRAY 60 ML',
-                    image: 'https://ngorder-1.sgp1.digitaloceanspaces.com/71878/products/antry-deospray-1719044048185.jpeg',
+                    image: 'antry-100ml-2.jpg',
                 },
                 {
                     title: 'ANTRY BRIGTHENING BODY SCRUB',
-                    image: 'https://ngorder-1.sgp1.digitaloceanspaces.com/71878/products/antry-deospray-1719044048185.jpeg',
+                    image: 'body-scrub-1.jpg',
                 },
                 {
                     title: 'ANTRY MINIFA EAU DE TOILETTE - Varian AEESYA',
-                    image: 'https://cdn.orderonline.id/uploads/images_3897201719126537455.jpg',
+                    image: 'aeesya.jpg',
                 },
                 {
                     title: 'ANTRY MINIFA EAU DE TOILETTE - Varian AMEENA',
-                    image: 'https://cdn.orderonline.id/uploads/images_2848241719126539231.jpg',
+                    image: 'ameena.jpg',
                 },
                 {
                     title: 'ANTRY MINIFA EAU DE TOILETTE - Varian SHAFEEA',
-                    image: 'https://cdn.orderonline.id/uploads/images_4503441719126539312.jpg',
+                    image: 'shafeea.jpg',
                 },
             ],
             responsiveOptions: [
