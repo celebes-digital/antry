@@ -1,17 +1,16 @@
 <template>
-    <ConfirmPopup class="max-lg:hidden" group="popup" />
-    <ConfirmDialog class="lg:hidden" group="dialog" />
-    <Toast class="max-lg:hidden"></Toast>
+	<ConfirmPopup class="max-lg:hidden" group="popup" />
+	<ConfirmDialog class="lg:hidden" group="dialog" />
+	<Toast class="max-lg:hidden"></Toast>
 
 	<Navbar :navItems="navItems" />
-    
-    <main class="relative top-20">
-        <RouterView></RouterView>
-        
-        <Footer :navItems="navItems" />
-    </main>
+	
+	<main class="relative top-20">
+		<RouterView />
+		<Footer :navItems="navItems" />
+	</main>
 
-    <ScrollTop />
+	<ScrollTop />
 </template>
 
 <script>
@@ -26,7 +25,7 @@ export default {
 			navItems: [
 				{
 					label: 'Home',
-					to: '#home'
+					to: '#hero'
 				},
 				{
 					label: 'Tentang Kami',
@@ -42,7 +41,7 @@ export default {
 				},
 			]
 		}
-    },
+	},
 	provide() {
 		return {
 			default: this.default

@@ -36,7 +36,7 @@
         <img class="px-3 pb-3" src="https://scontent.fupg2-1.fna.fbcdn.net/v/t39.30808-6/456954384_855795649952373_4717355523071977988_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=pcGpyEpCulwQ7kNvgGxGxzo&_nc_zt=23&_nc_ht=scontent.fupg2-1.fna&_nc_gid=AOezZV9deJSNY6uh5l5hyok&oh=00_AYB3_zQXyfKUDatpCYvDHaR9IYqzTgkiQeSAtHU1ak6nrg&oe=6714D68C" alt="Image" width="100%" />
         <img class="w-96" src="https://sahabatkhadeejah.co.id/wp-content/uploads/2024/03/arrow-down-animated.gif" alt="Image" width="100%" />
         <a href="https://wa.me/6285342913781" class="mb-40">
-            <img class="w-[600px]" src="https://sahabatkhadeejah.co.id/wp-content/uploads/2024/03/tombol-whatsapp-iframe-multimedia-1.png" alt="">
+            <img class="w-[600px]" src="https://sahabatkhadeejah.co.id/wp-content/uploads/2024/03/tombol-whatsapp-iframe-multimedia-1.png" alt="baka">
         </a>
 	</section>
 </template>
