@@ -20,17 +20,16 @@
 
         <Section sectionId="produk">
             <SectionTitle title="Produk-Produk Antry" subTitle="Hingga saat ini produk-produk ANTRY telah banyak tersebar diseluruh wilayah Indonesia hingga kemanca negara dan memberikan manfaat bagi seluruh penggunanya." />
-
             <Carousel :value="useStore.products" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" circular :autoplayInterval="3000">
                 <template #item="slotProps">
-                    <Card class="shadow-md mx-1 mb-2 flex flex-col items-center">
+                    <Card class="shadow-md mx-1 flex flex-col items-center h-full">
                         <template #title>
+                            <h4 class="text-gray-700">{{ slotProps.data.title }}</h4>
+                        </template>
+                        <template #content>
                             <DeferredContent>
                                 <img :src="this.default.domain + 'thumbnail-' + slotProps.data.image" :alt="slotProps.data.title" class="w-full h-[350px] rounded object-cover" />
                             </DeferredContent>
-                        </template>
-                        <template #content>
-                            <h4 class="text-gray-700">{{ slotProps.data.title }}</h4>
                         </template>
                     </Card>
                 </template>
@@ -39,7 +38,6 @@
 
         <Section sectionId="faq" class="grid grid-cols-12 items-center">
             <SectionTitle class="col-span-12 lg:col-span-4 text-start" title="Pertanyaan Yang Sering Ditanyakan" subTitle="Beberapa pertanyaan yang biasa ditanyakan calon mitra kami." />
-
             <Card class="col-span-12 lg:col-span-8 shadow-md">
                 <template #title>
                     
@@ -63,7 +61,6 @@
 
         <Section sectionId="keuntungan-mitra">
             <SectionTitle title="Apa saja yang kalian dapatkan saat berbagung menjadi Mitra ANTRY?" subTitle="ANTRY juga memiliki program reward bagi semua Mitranya. Reward yang kalian bisa dapatkan tergantung dari jumlah pesanan yang kalian order. Bukan hanya itu saja, kalian juga berhak mendapatkan Reward Plus dari ANTRY sesuai dengan ketentuan yang berlaku. Berikut daftar reward dari Produk ANTRY :" />
-
             <div class="grid grid-cols-12 gap-3">
                 <Card v-for="rewardItem in useStore.rewardItems" :key="rewardItem.title" class="col-span-12 lg:col-span-6 shadow-md">
                     <template #title>
@@ -83,7 +80,6 @@
 
         <Section sectionId="testimoni">
             <SectionTitle title="Testimoni Dari Klien Tercinta Kami" subTitle="Daftar testimoni dari berbagai social media dan maket place" />
-
             <Carousel :value="useStore.testimoniItems" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" circular :autoplayInterval="3000">
                 <template #item="slotProps">
                     <div class="mx-1 flex flex-col items-center">
@@ -104,13 +100,11 @@
 
         <Section sectionId="member">
             <SectionTitle title="Apa Keuntungan Bergabung Menjadi Member ANTRY" subTitle="Hal yang paling penting bagi setiap calon member ANTRY pasti bertanya apasih keuntungan bergabung menjadi Mitra ANTRY?" />
-
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
                 <!-- <div v-for="item in memberItems" :key="item.title" class="col-auto">
                     <h4 class="">{{ item.title }}</h4>
                     <p>{{ item.description }}</p>
                 </div> -->
-                
                 <Card v-for="item in useStore.memberItems" :key="item.title" class="col-auto shadow-md">
                     <template #title>
                         {{ item.title }}
