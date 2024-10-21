@@ -32,7 +32,7 @@
 				</div>
 			</div>
 
-			<div class="col-span-12 text-center">
+			<div class="col-span-12 text-center pt-5">
 				Made By Celebes Digital
 			</div>
 		</div>
