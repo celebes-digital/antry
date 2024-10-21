@@ -47,7 +47,7 @@
                             <AccordionHeader>{{ tab.title }}</AccordionHeader>
                             <AccordionContent>
                                 <p class="m-0">{{ tab.content }}</p>
-                                <ul class="list-disc list-inside">
+                                <ul class="list-disc px-4">
                                     <li v-for="item in tab.list" :key="item.title">{{ item.title }}</li>
                                 </ul>
                                 <p class="m-0">{{ tab.subContent }}</p>
@@ -66,10 +66,10 @@
                         {{ rewardItem.title }}
                     </template>
                     <template #content>
-                        <div class="flex flex-col justify-between h-full">
-                            <ul>
+                        <div class="flex flex-col justify-between h-full px-4">
+                            <ol class="list-decimal">
                                 <li v-for="item in rewardItem.items" :key="item.title" class="mb-2">{{ item.title }}</li>
-                            </ul>
+                            </ol>
                             <p class="mt-5">{{ rewardItem.notes }}</p>
                         </div>
                     </template>
