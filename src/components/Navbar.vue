@@ -27,7 +27,7 @@
 		<div class="flex flex-col justify-between h-full">
 			<div class="flex flex-col gap-4 ">
 				<a
-					v-for="item in navItems" 
+					v-for="item in useStore.navItems" 
 					:key="item.label" 
 					:href="item.to"
 					class="duration-300 ease-in-out transition-all hover:bg-orange-50 hover:text-orange-500 text-center py-5 rounded-md"

@@ -1,5 +1,5 @@
 <template>
-    <div id="hero" class="bg-orange-50">
+    <div id="hero" class="bg-orange-50 scroll-m-20">
         <Container>
             <div class="grid grid-cols-12 pb-10">
                 <div class="col-span-12 lg:col-span-7 flex flex-col items-center text-center lg:text-left lg:items-start justify-center px-2 lg:pe-20 order-2 lg:order-1">
@@ -134,7 +134,7 @@
             </Carousel>
         </Section>
 
-        <Section sectionId="daftar-sekarang">
+        <Section sectionId="daftar">
             <!-- <SectionTitle title="Daftar Menjadi Mitra ANTRY" subTitle="" /> -->
             <Card class="col-span-12 shadow-md">
                 <template #content>
