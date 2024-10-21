@@ -27,7 +27,19 @@
                         </template>
                         <template #content>
                             <DeferredContent>
-                                <img :src="this.default.domain + 'thumbnail-' + slotProps.data.image" :alt="slotProps.data.title" class="w-full h-[350px] rounded object-cover" />
+                                <Image alt="Image" preview class="z-20">
+                                    <template #previewicon>
+                                        <i class="pi pi-eye"></i>
+                                    </template>
+                                    <template #image>
+                                        <img :src="this.default.domain + 'thumbnail-' + slotProps.data.image" :alt="slotProps.data.title" class="w-full h-[350px] rounded object-cover" />
+                                    </template>
+                                    <template #preview>
+                                        <div class="w-full flex justify-center">
+                                            <img :src="this.default.domain + slotProps.data.image" :alt="slotProps.data.title" @click="slotProps.onClick" class="w-full lg:w-1/2" />
+                                        </div>
+                                    </template>
+                                </Image>
                             </DeferredContent>
                         </template>
                     </Card>
@@ -35,12 +47,10 @@
             </Carousel>
         </Section>
 
+
         <Section sectionId="faq" class="grid grid-cols-12 items-center">
             <SectionTitle class="col-span-12 lg:col-span-4 text-start" title="Pertanyaan Yang Sering Ditanyakan" subTitle="Beberapa pertanyaan yang biasa ditanyakan calon mitra kami." />
             <Card class="col-span-12 lg:col-span-8 shadow-md">
-                <template #title>
-                    
-                </template>
                 <template #content>
                     <Accordion value="0">
                         <AccordionPanel v-for="tab in useStore.tabs" :key="tab.title" :value="tab.value">
@@ -83,13 +93,25 @@
                 <template #item="slotProps">
                     <div class="mx-1 flex flex-col items-center">
                         <Card class="col-span-12 shadow-md mb-2 w-full">
-                            <template #title>
-                                <DeferredContent>
-                                    <img :src="this.default.domain + 'thumbnail-' + slotProps.data.image" :alt="slotProps.data.image" class="w-full h-[350px] rounded object-cover" />
-                                </DeferredContent>
-                            </template>
                             <template #content>
-                                
+                                <DeferredContent>
+                                    <!-- <img :src="this.default.domain + 'thumbnail-' + slotProps.data.image" :alt="slotProps.data.image" class="w-full h-[350px] rounded object-cover" /> -->
+                                    <Image alt="Image" preview class="z-20">
+                                        <template #previewicon>
+                                            <i class="pi pi-eye"></i>
+                                        </template>
+                                        <template #image>
+                                            <div class="w-full flex justify-center">
+                                                <img :src="this.default.domain + 'thumbnail-' + slotProps.data.image" :alt="slotProps.data.image" class="w-full rounded object-cover" />
+                                            </div>
+                                        </template>
+                                        <template #preview>
+                                            <div class="w-full flex justify-center">
+                                                <img :src="this.default.domain + slotProps.data.image" :alt="slotProps.data.title" @click="slotProps.onClick" class="w-full lg:w-1/2" />
+                                            </div>
+                                        </template>
+                                    </Image>
+                                </DeferredContent>
                             </template>
                         </Card>
                     </div>
@@ -138,4 +160,7 @@ export default {
 .p-card-body {
     @apply h-full
 }
+/* .p-toast {
+    z-index: 45;
+} */
 </style>

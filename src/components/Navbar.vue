@@ -1,6 +1,6 @@
 <template>
 
-	<nav class="z-40 h-20 w-full fixed p-5 lg:px-20 flex justify-between items-center shadow-md bg-white transition-all ease-in-out">
+	<nav class="z-10 h-20 w-full fixed p-5 lg:px-20 flex justify-between items-center shadow-md bg-white transition-all ease-in-out">
 		<a href="#home">
 			<img class="h-20 w-20" src="https://antryofficial.com/logoantry.png" alt="Logo Antry">
 		</a>
