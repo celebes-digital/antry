@@ -5,7 +5,8 @@
                 <div class="col-span-12 lg:col-span-7 flex flex-col items-center text-center lg:text-left lg:items-start justify-center px-2 lg:pe-20 order-2 lg:order-1">
                     <p class="text-xl font-normal  text-gray-700">{{ useStore.about.subTitle }}</p>
                     <h1 class="text-2xl font-semibold text-gray-700 mb-4">{{ useStore.about.description }}</h1>
-                    <Button label="Daftar Menjadi Mitra" icon="pi pi-whatsapp" class="w-fit" size="large"></Button>
+                    <a href="https://wa.me/6285342913781"></a>
+                    <Button label="Daftar Menjadi Mitra" icon="pi pi-whatsapp" severity="success" class="text-white w-fit" size="large"></Button>
                 </div>
                 <div class="col-span-12 lg:col-span-5 flex w-full justify-end order-1 lg:order-2 ">
                     <DeferredContent>
@@ -26,7 +27,7 @@
                             <h3 class="text-gray-700">{{ slotProps.data.title }}</h3>
                         </template>
                         <template #content>
-                            <DeferredContent>
+                            <DeferredContent class="h-full flex items-end">
                                 <Image alt="Image" preview class="z-20">
                                     <template #previewicon>
                                         <i class="pi pi-eye text-2xl"></i>
@@ -47,9 +48,8 @@
             </Carousel>
         </Section>
 
-
         <Section sectionId="faq" class="grid grid-cols-12 items-center">
-            <SectionTitle class="col-span-12 lg:col-span-4 text-start" title="Pertanyaan Yang Sering Ditanyakan" subTitle="Beberapa pertanyaan yang biasa ditanyakan calon mitra kami." />
+            <SectionTitle class="col-span-12 lg:col-span-4 lg:text-start text-center" title="Pertanyaan Yang Sering Ditanyakan" subTitle="Beberapa pertanyaan yang biasa ditanyakan calon mitra kami." />
             <Card class="col-span-12 lg:col-span-8 shadow-md">
                 <template #content>
                     <Accordion value="0">
@@ -87,6 +87,20 @@
             </div>
         </Section>
 
+        <Section sectionId="keuntungan-member">
+            <SectionTitle title="Apa Keuntungan Bergabung Menjadi Member ANTRY" subTitle="Hal yang paling penting bagi setiap calon member ANTRY pasti bertanya apasih keuntungan bergabung menjadi Mitra ANTRY?" />
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+                <Card v-for="item in useStore.memberItems" :key="item.title" class="shadow-md">
+                    <template #title>
+                        {{ item.title }}
+                    </template>
+                    <template #content>
+                        <p v-html="item.description"></p>
+                    </template>
+                </Card>
+            </div>
+        </Section>
+
         <Section sectionId="testimoni">
             <SectionTitle title="Testimoni Dari Klien Tercinta Kami" subTitle="Daftar testimoni dari berbagai social media dan maket place" />
             <Carousel :value="useStore.testimoniItems" :numVisible="3" :numScroll="1" :responsiveOptions="useStore.responsiveOptions" circular :autoplayInterval="3000">
@@ -119,18 +133,18 @@
             </Carousel>
         </Section>
 
-        <Section sectionId="member">
-            <SectionTitle title="Apa Keuntungan Bergabung Menjadi Member ANTRY" subTitle="Hal yang paling penting bagi setiap calon member ANTRY pasti bertanya apasih keuntungan bergabung menjadi Mitra ANTRY?" />
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
-                <Card v-for="item in useStore.memberItems" :key="item.title" class="shadow-md">
-                    <template #title>
-                        {{ item.title }}
-                    </template>
-                    <template #content>
-                        <p v-html="item.description"></p>
-                    </template>
-                </Card>
-            </div>
+        <Section sectionId="daftar-sekarang">
+            <!-- <SectionTitle title="Daftar Menjadi Mitra ANTRY" subTitle="" /> -->
+            <Card class="col-span-12 shadow-md">
+                <template #content>
+                    <div class="flex flex-col items-center w-full py-5">
+                        <h2 class="text-2xl font-semibold pb-5">Tunggu Apalagi Daftar Menjadi Mitra ANTRY Sekarang Juga</h2>
+                        <a href="https://wa.me/6285342913781">
+                            <Button label="Daftar Sekarang" icon="pi pi-whatsapp" severity="success" class="text-white" ></Button>
+                        </a>
+                    </div>
+                </template>
+            </Card>
         </Section>
     </Container>
 </template>

@@ -41,8 +41,6 @@
 
 <script>
 import { useStore } from '@/stores';
-import Container from './Container.vue';
-
 export default {
 	name:'Footer',
 	inject: ['default'],

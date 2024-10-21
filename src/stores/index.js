@@ -9,12 +9,20 @@ export const useStore = defineStore('products', {
                     to: '#hero'
                 },
                 {
-                    label: 'Tentang Kami',
-                    to: '#tentang-kami'
-                },
-                {
                     label: 'Produk',
                     to: '#produk'
+                },
+                {
+                    label: "FAQ's",
+                    to: '#faq'
+                },
+                {
+                    label: 'Keuntungan Mitra',
+                    to: '#keuntungan-mitra'
+                },
+                {
+                    label: 'Keuntungan Member',
+                    to: '#keuntungan-member'
                 },
                 {
                     label: 'Testimoni',
