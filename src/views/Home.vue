@@ -23,7 +23,7 @@
                 <template #item="slotProps">
                     <Card class="shadow-md mx-1 flex flex-col items-center h-full">
                         <template #title>
-                            <h4 class="text-gray-700">{{ slotProps.data.title }}</h4>
+                            <h3 class="text-gray-700">{{ slotProps.data.title }}</h3>
                         </template>
                         <template #content>
                             <DeferredContent>
@@ -66,8 +66,8 @@
                         {{ rewardItem.title }}
                     </template>
                     <template #content>
-                        <div class="flex flex-col justify-between h-full px-4">
-                            <ol class="list-decimal">
+                        <div class="flex flex-col justify-between h-full">
+                            <ol class="list-decimal px-4">
                                 <li v-for="item in rewardItem.items" :key="item.title" class="mb-2">{{ item.title }}</li>
                             </ol>
                             <p class="mt-5">{{ rewardItem.notes }}</p>
