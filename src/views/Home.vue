@@ -109,24 +109,22 @@
                     <div class="mx-1 flex flex-col items-center">
                         <Card class="col-span-12 shadow-md mb-2 w-full">
                             <template #content>
-                                <DeferredContent>
-                                    <!-- <img :src="this.default.domain + 'thumbnail-' + slotProps.data.image" :alt="slotProps.data.image" class="w-full h-[350px] rounded object-cover" /> -->
-                                    <Image alt="Image" preview class="z-20">
-                                        <template #previewicon>
-                                            <i class="pi pi-eye text-2xl"></i>
-                                        </template>
-                                        <template #image>
-                                            <div class="w-full flex justify-center">
-                                                <img :src="this.default.domain + 'thumbnail-' + slotProps.data.image" :alt="slotProps.data.image" class="w-full rounded object-cover" />
-                                            </div>
-                                        </template>
-                                        <template #preview>
-                                            <div class="w-full flex justify-center">
-                                                <img :src="this.default.domain + slotProps.data.image" :alt="slotProps.data.title" @click="slotProps.onClick" class="w-full lg:w-1/2" />
-                                            </div>
-                                        </template>
-                                    </Image>
-                                </DeferredContent>
+                                <!-- <img :src="this.default.domain + 'thumbnail-' + slotProps.data.image" :alt="slotProps.data.image" class="w-full h-[350px] rounded object-cover" /> -->
+                                <Image alt="Image" preview class="z-20">
+                                    <template #previewicon>
+                                        <i class="pi pi-eye text-2xl"></i>
+                                    </template>
+                                    <template #image>
+                                        <div class="w-full flex justify-center">
+                                            <img :src="this.default.domain + 'thumbnail-' + slotProps.data.image" :alt="slotProps.data.image" class="w-full rounded object-cover" />
+                                        </div>
+                                    </template>
+                                    <template #preview>
+                                        <div class="w-full flex justify-center">
+                                            <img :src="this.default.domain + slotProps.data.image" :alt="slotProps.data.title" @click="slotProps.onClick" class="w-full lg:w-1/2" />
+                                        </div>
+                                    </template>
+                                </Image>
                             </template>
                         </Card>
                     </div>
