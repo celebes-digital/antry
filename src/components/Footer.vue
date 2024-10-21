@@ -11,7 +11,7 @@
 				<div class="col-span-12 lg:col-span-6">
 					<h4 class="font-bold text-lg">Navigasi</h4>
 					<ul>
-						<li v-for="item in navItems" :key="item.label">
+						<li v-for="item in useStore.navItems" :key="item.label">
 							<RouterLink :to="item.to">
 								{{ item.label }}
 							</RouterLink>

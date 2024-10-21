@@ -17,10 +17,9 @@
     </div>
 
     <Container>
-
         <Section sectionId="produk">
             <SectionTitle title="Produk-Produk Antry" subTitle="Hingga saat ini produk-produk ANTRY telah banyak tersebar diseluruh wilayah Indonesia hingga kemanca negara dan memberikan manfaat bagi seluruh penggunanya." />
-            <Carousel :value="useStore.products" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" circular :autoplayInterval="3000">
+            <Carousel :value="useStore.products" :numVisible="3" :numScroll="1" :responsiveOptions="useStore.responsiveOptions" circular :autoplayInterval="3000">
                 <template #item="slotProps">
                     <Card class="shadow-md mx-1 flex flex-col items-center h-full">
                         <template #title>
@@ -80,7 +79,7 @@
 
         <Section sectionId="testimoni">
             <SectionTitle title="Testimoni Dari Klien Tercinta Kami" subTitle="Daftar testimoni dari berbagai social media dan maket place" />
-            <Carousel :value="useStore.testimoniItems" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" circular :autoplayInterval="3000">
+            <Carousel :value="useStore.testimoniItems" :numVisible="3" :numScroll="1" :responsiveOptions="useStore.responsiveOptions" circular :autoplayInterval="3000">
                 <template #item="slotProps">
                     <div class="mx-1 flex flex-col items-center">
                         <Card class="col-span-12 shadow-md mb-2 w-full">
@@ -115,7 +114,6 @@
                 </Card>
             </div>
         </Section>
-
     </Container>
 </template>
 

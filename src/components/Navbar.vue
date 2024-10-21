@@ -7,7 +7,7 @@
 
 		<div class="hidden lg:flex gap-10">
 			<a 
-				v-for="item in navItems" 
+				v-for="item in useStore.navItems" 
 				:key="item.label" 
 				:href="item.to"
 				class="hover:text-orange-500 border-b-2 border-white hover:border-orange-500 duration-300 transition-all ease-in-out"
@@ -43,13 +43,13 @@
 </template>
 
 <script>
+import { useStore } from '@/stores';
+
 export default {
     name: 'Navbar',
-    props: {
-		navItems: Array,
-    },
     data() {
         return {
+			useStore: useStore(),
 			position: 'center',
 			visible: false
         };

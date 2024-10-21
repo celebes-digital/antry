@@ -3,6 +3,24 @@ import { defineStore } from 'pinia'
 export const useStore = defineStore('products', {
     state: () => {
         return {
+            navItems: [
+                {
+                    label: 'Home',
+                    to: '#hero'
+                },
+                {
+                    label: 'Tentang Kami',
+                    to: '#tentang-kami'
+                },
+                {
+                    label: 'Produk',
+                    to: '#produk'
+                },
+                {
+                    label: 'Testimoni',
+                    to: '#testimoni'
+                },
+            ],
             products: [
                 {
                     title: 'ANTRY DEO SPRAY 100 ML',

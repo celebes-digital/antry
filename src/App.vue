@@ -3,11 +3,11 @@
 	<ConfirmDialog class="lg:hidden" group="dialog" />
 	<Toast class="max-lg:hidden"></Toast>
 
-	<Navbar :navItems="navItems" />
+	<Navbar />
 	
 	<main class="relative top-20">
 		<RouterView />
-		<Footer :navItems="navItems" />
+		<Footer />
 	</main>
 
 	<ScrollTop />
@@ -22,24 +22,6 @@ export default {
 				title: 'ANTRY OFFICIAL',
 				domain: 'https://antryofficial.com/'
 			},
-			navItems: [
-				{
-					label: 'Home',
-					to: '#hero'
-				},
-				{
-					label: 'Tentang Kami',
-					to: '#tentang-kami'
-				},
-				{
-					label: 'Produk',
-					to: '#produk'
-				},
-				{
-					label: 'Testimoni',
-					to: '#testimoni'
-				},
-			]
 		}
 	},
 	provide() {
