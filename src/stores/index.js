@@ -45,27 +45,27 @@ export const useStore = defineStore('products', {
             ],
             minifa: [
                 {
-                    title: 'ANTRY MINIFA EAU DE TOILETTE - Varian AEESYA',
+                    title: 'Varian AEESYA',
                     image: 'aeesya.webp',
                 },
                 {
-                    title: 'ANTRY MINIFA EAU DE TOILETTE - Varian AMEENA',
+                    title: 'Varian AMEENA',
                     image: 'ameena.webp',
                 },
                 {
-                    title: 'ANTRY MINIFA EAU DE TOILETTE - Varian SHAFEEA',
+                    title: 'Varian SHAFEEA',
                     image: 'shafeea.webp',
                 },
                 {
-                    title: 'ANTRY MINIFA EAU DE TOILETTE - Varian REEHANA',
+                    title: 'Varian REEHANA',
                     image: 'reehana.webp',
                 },
                 {
-                    title: 'ANTRY MINIFA EAU DE TOILETTE - Varian KHALEEJA',
+                    title: 'Varian KHALEEJA',
                     image: 'khaleeja.webp',
                 },
                 {
-                    title: 'ANTRY MINIFA EAU DE TOILETTE - Varian MAREEA',
+                    title: 'Varian MAREEA',
                     image: 'mareea.webp',
                 },
             ],

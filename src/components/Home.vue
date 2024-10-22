@@ -41,7 +41,7 @@
                 <template #item="slotProps">
                     <div class="mx-1 flex flex-col items-center">
                         <Card class="col-span-12 shadow-md mb-2 w-full">
-                            <template #title>{{ slotProps.data.title }}</template>
+                            <template #title><h4 class="text-center">{{ slotProps.data.title }}</h4></template>
                             <template #content>
                                 <Image alt="Image" preview class="z-20">
                                     <template #previewicon>
