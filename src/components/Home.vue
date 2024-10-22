@@ -11,7 +11,7 @@
                 </div>
                 <div class="col-span-12 lg:col-span-5 flex w-full justify-end order-1 lg:order-2 ">
                     <DeferredContent>
-                        <img :src="this.default.domain + 'thumbnail-' + 'logoantry.webp'" alt="logo antry">
+                        <img :src="this.default.domain + 'thumbnail-' + 'logoantry.png'" alt="logo antry">
                     </DeferredContent>
                 </div>
             </div>
@@ -21,32 +21,71 @@
     <Container>
         <Section sectionId="produk">
             <SectionTitle title="Produk-Produk Antry" subTitle="Hingga saat ini produk-produk ANTRY telah banyak tersebar diseluruh wilayah Indonesia hingga ke mancanegara dan memberikan manfaat bagi seluruh penggunanya." />
-            <Carousel :value="useStore.products" :numVisible="3" :numScroll="1" :responsiveOptions="useStore.responsiveOptions" circular :autoplayInterval="3000">
-                <template #item="slotProps">
-                    <Card class="shadow-md mx-1 flex flex-col items-center h-full">
-                        <template #title>
-                            <h3 class="text-gray-700">{{ slotProps.data.title }}</h3>
+
+            <div class="grid grid-cols-12">
+                <Image alt="Image" preview class="z-20 col-span-12 lg:col-span-6 gap-4" v-for="item in useStore.products" :key="item.title">
+                    <template #previewicon>
+                        <i class="pi pi-eye text-2xl"></i>
+                    </template>
+                    <template #image>
+                        <img :src="this.default.domain + 'thumbnail-' + item.image" :alt="item.title" class="w-full h-[350px] rounded object-cover" />
+                    </template>
+                    <template #preview>
+                        <div class="w-full flex justify-center">
+                            <img :src="this.default.domain + item.image" :alt="item.title" @click="slotProps.onClick" class="w-full lg:w-1/2" />
+                        </div>
+                    </template>
+                </Image>
+            </div>
+        </Section>
+
+        <Section>
+            <SectionTitle title="Produk ANTRY MINIFA EAU DE TOILETTE" subTitle="Daftar variant produk ANTRY MINIFA EAU DE TOILETTE" />
+
+            <div class="grid grid-cols-12">
+                <Image alt="Image" preview class="col-span-12 lg:col-span-4 gap-4">
+                    <template #previewicon>
+                        <i class="pi pi-eye text-2xl"></i>
+                    </template>
+                    <template #image>
+                        <img :src="this.default.domain + 'thumbnail-' + 'minifa-price.webp'" alt="Daftar Harga Minifa" class="w-full h-[350px] rounded object-cover" />
+                    </template>
+                    <template #preview>
+                        <div class="w-full flex justify-center">
+                            <img :src="this.default.domain + 'minifa-price.webp'" :alt="item.title" @click="slotProps.onClick" class="w-full lg:w-1/2" />
+                        </div>
+                    </template>
+                </Image>
+
+                <div class="col-span-12 lg:col-span-8">
+                    <Carousel :value="useStore.minifa" :numVisible="2" :numScroll="1" :responsiveOptions="useStore.responsiveOptions" circular :autoplayInterval="3000">
+                        <template #item="slotProps">
+                            <div class="mx-1 flex flex-col items-center">
+                                <Card class="col-span-12 shadow-md mb-2 w-full">
+                                    <template #title>{{ slotProps.data.title }}</template>
+                                    <template #content>
+                                        <Image alt="Image" preview class="z-20">
+                                            <template #previewicon>
+                                                <i class="pi pi-eye text-2xl"></i>
+                                            </template>
+                                            <template #image>
+                                                <div class="w-full flex justify-center">
+                                                    <img :src="this.default.domain + slotProps.data.image" :alt="slotProps.data.image" class="w-full rounded object-cover" />
+                                                </div>
+                                            </template>
+                                            <template #preview>
+                                                <div class="w-full flex justify-center">
+                                                    <img :src="this.default.domain + slotProps.data.image" :alt="slotProps.data.title" @click="slotProps.onClick" class="w-full lg:w-1/2" />
+                                                </div>
+                                            </template>
+                                        </Image>
+                                    </template>
+                                </Card>
+                            </div>
                         </template>
-                        <template #content>
-                            <DeferredContent class="h-full flex items-end">
-                                <Image alt="Image" preview class="z-20">
-                                    <template #previewicon>
-                                        <i class="pi pi-eye text-2xl"></i>
-                                    </template>
-                                    <template #image>
-                                        <img :src="this.default.domain + 'thumbnail-' + slotProps.data.image" :alt="slotProps.data.title" class="w-full h-[350px] rounded object-cover" />
-                                    </template>
-                                    <template #preview>
-                                        <div class="w-full flex justify-center">
-                                            <img :src="this.default.domain + slotProps.data.image" :alt="slotProps.data.title" @click="slotProps.onClick" class="w-full lg:w-1/2" />
-                                        </div>
-                                    </template>
-                                </Image>
-                            </DeferredContent>
-                        </template>
-                    </Card>
-                </template>
-            </Carousel>
+                    </Carousel>
+                </div>
+            </div>
         </Section>
 
         <Section sectionId="faq" class="grid grid-cols-12 items-center">
@@ -130,7 +169,7 @@
                                     </template>
                                     <template #image>
                                         <div class="w-full flex justify-center">
-                                            <img :src="this.default.domain + 'thumbnail-' + slotProps.data.image" :alt="slotProps.data.image" class="w-full rounded object-cover" />
+                                            <img :src="this.default.domain + slotProps.data.image" :alt="slotProps.data.image" class="w-full rounded object-cover" />
                                         </div>
                                     </template>
                                     <template #preview>

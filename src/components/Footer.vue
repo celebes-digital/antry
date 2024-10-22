@@ -3,7 +3,7 @@
 		<div class="grid grid-cols-12 items-center bg-white rounded-t-md shadow-md text-gray-700 p-5 pb-2">
 			<div class="col-span-12 lg:col-span-4 flex items-center flex-wrap justify-center">
 				<img :src="this.default.domain + 'logoambema.webp'" alt="logo ambema" width="200" />
-				<img :src="this.default.domain + 'logoantry.webp'" alt="logo antry" width="150" class="ml-4" />
+				<img :src="this.default.domain + 'logoantry.png'" alt="logo antry" width="150" class="ml-4" />
 			</div>
 
 			<div class="col-span-12 lg:col-span-8 grid grid-cols-12 gap-3">
