@@ -12,9 +12,9 @@
 					<h4 class="font-bold text-lg pb-4">Navigasi</h4>
 					<ul>
 						<li v-for="item in useStore.navItems" :key="item.label">
-							<RouterLink :to="item.to" class="break-words">
+							<a :href="item.to" class="break-words">
 								{{ item.label }}
-							</RouterLink>
+							</a>
 						</li>
 					</ul>
 				</div>

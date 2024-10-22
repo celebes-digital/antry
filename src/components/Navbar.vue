@@ -10,7 +10,7 @@
 				v-for="item in useStore.navItems" 
 				:key="item.label" 
 				:href="item.to"
-				class="hover:text-orange-500 border-b-2 border-white hover:border-orange-500 duration-300 transition-all ease-in-out"
+				class="hover:text-orange-500 border-b-2 border-white hover:border-orange-500 duration-300 transition-all ease-in-out text-gray-700"
 			>
 				{{ item.label }}
 			</a>
@@ -22,7 +22,6 @@
 		</div>
 	</nav>
 
-	<!-- Dialog for smaller screens -->
 	<Dialog v-model:visible="visible" header="Menu Navigasi" :style="{ width: '25rem', height: '100%', maxHeight: '100%', margin: '0', border: '0' }" :position="position" :modal="true" :draggable="false" class="rounded-none">
 		<div class="flex flex-col justify-between h-full">
 			<div class="flex flex-col gap-4 ">

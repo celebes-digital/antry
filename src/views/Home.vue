@@ -102,6 +102,20 @@
             </div>
         </Section>
 
+        <Section sectionId="daftar">
+            <!-- <SectionTitle title="Daftar Menjadi Mitra ANTRY" subTitle="" /> -->
+            <Card class="col-span-12 shadow-md">
+                <template #content>
+                    <div class="flex flex-col items-center w-full py-5">
+                        <h2 class="text-2xl font-semibold pb-5">Tunggu Apalagi Daftar Menjadi Mitra ANTRY Sekarang Juga</h2>
+                        <a href="https://wa.me/6285342913781">
+                            <Button label="Daftar Sekarang" icon="pi pi-whatsapp" severity="success" class="text-white" ></Button>
+                        </a>
+                    </div>
+                </template>
+            </Card>
+        </Section>
+
         <Section sectionId="testimoni">
             <SectionTitle title="Testimoni Dari Klien Tercinta Kami" subTitle="Daftar testimoni dari berbagai social media dan maket place" />
             <Carousel :value="useStore.testimoniItems" :numVisible="3" :numScroll="1" :responsiveOptions="useStore.responsiveOptions" circular :autoplayInterval="3000">
@@ -130,20 +144,6 @@
                     </div>
                 </template>
             </Carousel>
-        </Section>
-
-        <Section sectionId="daftar">
-            <!-- <SectionTitle title="Daftar Menjadi Mitra ANTRY" subTitle="" /> -->
-            <Card class="col-span-12 shadow-md">
-                <template #content>
-                    <div class="flex flex-col items-center w-full py-5">
-                        <h2 class="text-2xl font-semibold pb-5">Tunggu Apalagi Daftar Menjadi Mitra ANTRY Sekarang Juga</h2>
-                        <a href="https://wa.me/6285342913781">
-                            <Button label="Daftar Sekarang" icon="pi pi-whatsapp" severity="success" class="text-white" ></Button>
-                        </a>
-                    </div>
-                </template>
-            </Card>
         </Section>
     </Container>
 </template>
