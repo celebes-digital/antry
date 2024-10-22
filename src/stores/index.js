@@ -32,39 +32,39 @@ export const useStore = defineStore('products', {
             products: [
                 {
                     title: 'ANTRY DEO SPRAY 100 ML',
-                    image: 'antry-100ml-1.jpg',
+                    image: 'antry-100ml-1.webp',
                 },
                 {
                     title: 'ANTRY DEO SPRAY 60 ML',
-                    image: 'antry-100ml-2.jpg',
+                    image: 'antry-100ml-2.webp',
                 },
-                {
-                    title: 'ANTRY BRIGHTENING BODY SCRUB',
-                    image: 'body-scrub-1.jpg',
-                },
+                // {
+                //     title: 'ANTRY BRIGHTENING BODY SCRUB',
+                //     image: 'body-scrub-1.webp',
+                // },
                 {
                     title: 'ANTRY MINIFA EAU DE TOILETTE - Varian AEESYA',
-                    image: 'aeesya.jpg',
+                    image: 'aeesya.webp',
                 },
                 {
                     title: 'ANTRY MINIFA EAU DE TOILETTE - Varian AMEENA',
-                    image: 'ameena.jpg',
+                    image: 'ameena.webp',
                 },
                 {
                     title: 'ANTRY MINIFA EAU DE TOILETTE - Varian SHAFEEA',
-                    image: 'shafeea.jpg',
+                    image: 'shafeea.webp',
                 },
                 {
                     title: 'ANTRY MINIFA EAU DE TOILETTE - Varian REEHANA',
-                    image: 'reehana.jpg',
+                    image: 'reehana.webp',
                 },
                 {
                     title: 'ANTRY MINIFA EAU DE TOILETTE - Varian KHALEEJA',
-                    image: 'khaleeja.jpg',
+                    image: 'khaleeja.webp',
                 },
                 {
                     title: 'ANTRY MINIFA EAU DE TOILETTE - Varian MAREEA',
-                    image: 'mareea.jpg',
+                    image: 'mareea.webp',
                 },
             ],
             tabs: [
@@ -168,14 +168,14 @@ export const useStore = defineStore('products', {
             ],
             testimoniItems: [
                 // https://primefaces.org/cdn/primevue/images/product/
-                { image: 'testimoni-1.jpg' },
-                { image: 'testimoni-2.jpg' },
-                { image: 'testimoni-3.jpg' },
-                { image: 'testimoni-4.jpg' },
-                { image: 'testimoni-5.jpg' },
-                { image: 'testimoni-6.jpg' },
-                { image: 'testimoni-7.jpg' },
-                { image: 'testimoni-8.jpg' },
+                { image: 'testimoni-1.webp' },
+                { image: 'testimoni-2.webp' },
+                { image: 'testimoni-3.webp' },
+                { image: 'testimoni-4.webp' },
+                { image: 'testimoni-5.webp' },
+                { image: 'testimoni-6.webp' },
+                { image: 'testimoni-7.webp' },
+                { image: 'testimoni-8.webp' },
             ],
             memberItems: [
                 {
