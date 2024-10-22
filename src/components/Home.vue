@@ -11,7 +11,7 @@
                 </div>
                 <div class="col-span-12 lg:col-span-5 flex w-full justify-end order-1 lg:order-2 ">
                     <DeferredContent>
-                        <img :src="this.default.domain + 'thumbnail-' + 'logoantry.png'" alt="logo antry">
+                        <img :src="this.default.domain + 'logoantry.png'" alt="logo antry">
                     </DeferredContent>
                 </div>
             </div>
