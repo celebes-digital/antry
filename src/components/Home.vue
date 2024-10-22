@@ -22,33 +22,40 @@
         <Section sectionId="produk">
             <SectionTitle title="Produk-Produk Antry" subTitle="Hingga saat ini produk-produk ANTRY telah banyak tersebar diseluruh wilayah Indonesia hingga ke mancanegara dan memberikan manfaat bagi seluruh penggunanya." />
 
-            <div class="grid grid-cols-12">
-                <Image alt="Image" preview class="z-20 col-span-12 lg:col-span-6 gap-4" v-for="item in useStore.products" :key="item.title">
-                    <template #previewicon>
-                        <i class="pi pi-eye text-2xl"></i>
+            <div class="grid grid-cols-12 gap-4">
+                <Card class="col-span-12 lg:col-span-6 shadow-md" v-for="item in useStore.products" :key="item.title">
+                    <template #title>
+                        <h4 class="font-bold text-lg text-center pb-4">{{ item.title }}</h4>
                     </template>
-                    <template #image>
-                        <img :src="this.default.domain + 'thumbnail-' + item.image" :alt="item.title" class="w-full h-[350px] rounded object-cover" />
+                    <template #content>
+                        <Image alt="Image" preview class="z-20">
+                            <template #previewicon>
+                                <i class="pi pi-eye text-2xl"></i>
+                            </template>
+                            <template #image>
+                                <img :src="this.default.domain + 'thumbnail-' + item.image" :alt="item.title" class="w-full rounded object-cover" />
+                            </template>
+                            <template #preview>
+                                <div class="w-full flex justify-center">
+                                    <img :src="this.default.domain + item.image" :alt="item.title" @click="slotProps.onClick" class="w-full lg:w-1/2" />
+                                </div>
+                            </template>
+                        </Image>
                     </template>
-                    <template #preview>
-                        <div class="w-full flex justify-center">
-                            <img :src="this.default.domain + item.image" :alt="item.title" @click="slotProps.onClick" class="w-full lg:w-1/2" />
-                        </div>
-                    </template>
-                </Image>
+                </Card>
             </div>
         </Section>
 
         <Section>
-            <SectionTitle title="Produk ANTRY MINIFA EAU DE TOILETTE" subTitle="Daftar variant produk ANTRY MINIFA EAU DE TOILETTE" />
+            <SectionTitle title="Produk-Produk ANTRY MINIFA EAU DE TOILETTE" subTitle="Daftar variant produk ANTRY MINIFA EAU DE TOILETTE" />
 
-            <div class="grid grid-cols-12">
+            <div class="grid grid-cols-12 gap-4 items-center">
                 <Image alt="Image" preview class="col-span-12 lg:col-span-4 gap-4">
                     <template #previewicon>
                         <i class="pi pi-eye text-2xl"></i>
                     </template>
                     <template #image>
-                        <img :src="this.default.domain + 'thumbnail-' + 'minifa-price.webp'" alt="Daftar Harga Minifa" class="w-full h-[350px] rounded object-cover" />
+                        <img :src="this.default.domain + 'thumbnail-' + 'minifa-price.webp'" alt="Daftar Harga Minifa" class="w-full rounded object-cover" />
                     </template>
                     <template #preview>
                         <div class="w-full flex justify-center">
