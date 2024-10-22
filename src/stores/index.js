@@ -38,10 +38,10 @@ export const useStore = defineStore('products', {
                     title: 'ANTRY DEO SPRAY 60 ML',
                     image: 'antry-60ml.webp',
                 },
-                // {
-                //     title: 'ANTRY BRIGHTENING BODY SCRUB',
-                //     image: 'body-scrub-1.webp',
-                // },
+                {
+                    title: 'ANTRY MINIFA EAU DE TOILETTE',
+                    image: 'minifa-price.webp',
+                },
             ],
             minifa: [
                 {
@@ -68,28 +68,6 @@ export const useStore = defineStore('products', {
                     title: 'ANTRY MINIFA EAU DE TOILETTE - Varian MAREEA',
                     image: 'mareea.webp',
                 },
-            ],
-            resMinifa: [
-                {
-                    breakpoint: '1280px',
-                    numVisible: 2,
-                    numScroll: 1
-                },
-                {
-                    breakpoint: '1024px',
-                    numVisible: 1,
-                    numScroll: 1
-                },
-                {
-                    breakpoint: '768px',
-                    numVisible: 1,
-                    numScroll: 1
-                },
-                {
-                    breakpoint: '640px',
-                    numVisible: 1,
-                    numScroll: 1
-                }
             ],
             tabs: [
                 {

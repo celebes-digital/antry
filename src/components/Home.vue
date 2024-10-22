@@ -23,24 +23,12 @@
             <SectionTitle title="Produk-Produk Antry" subTitle="Hingga saat ini produk-produk ANTRY telah banyak tersebar diseluruh wilayah Indonesia hingga ke mancanegara dan memberikan manfaat bagi seluruh penggunanya." />
 
             <div class="grid grid-cols-12 gap-4">
-                <Card class="col-span-12 lg:col-span-6 shadow-md" v-for="item in useStore.products" :key="item.title">
+                <Card class="col-span-12 lg:col-span-4 shadow-md" v-for="item in useStore.products" :key="item.title">
                     <template #title>
                         <h4 class="font-bold text-lg text-center pb-4">{{ item.title }}</h4>
                     </template>
                     <template #content>
-                        <Image alt="Image" preview class="z-20">
-                            <template #previewicon>
-                                <i class="pi pi-eye text-2xl"></i>
-                            </template>
-                            <template #image>
-                                <img :src="this.default.domain + 'thumbnail-' + item.image" :alt="item.title" class="w-full rounded object-cover" />
-                            </template>
-                            <template #preview>
-                                <div class="w-full flex justify-center">
-                                    <img :src="this.default.domain + item.image" :alt="item.title" @click="slotProps.onClick" class="w-full lg:w-1/2" />
-                                </div>
-                            </template>
-                        </Image>
+                        <Image :src="this.default.domain + 'thumbnail-' + item.image" :alt="item.title" class="w-full rounded object-cover" />
                     </template>
                 </Card>
             </div>
@@ -49,50 +37,32 @@
         <Section>
             <SectionTitle title="Produk-Produk ANTRY MINIFA EAU DE TOILETTE" subTitle="Daftar variant produk ANTRY MINIFA EAU DE TOILETTE" />
 
-            <div class="grid grid-cols-12 gap-4 items-center">
-                <Image alt="Image" preview class="col-span-12 lg:col-span-4 gap-4">
-                    <template #previewicon>
-                        <i class="pi pi-eye text-2xl"></i>
-                    </template>
-                    <template #image>
-                        <img :src="this.default.domain + 'thumbnail-' + 'minifa-price.webp'" alt="Daftar Harga Minifa" class="w-full rounded object-cover" />
-                    </template>
-                    <template #preview>
-                        <div class="w-full flex justify-center">
-                            <img :src="this.default.domain + 'minifa-price.webp'" :alt="item.title" @click="slotProps.onClick" class="w-full lg:w-1/2" />
-                        </div>
-                    </template>
-                </Image>
-
-                <div class="col-span-12 lg:col-span-8">
-                    <Carousel :value="useStore.minifa" :numVisible="2" :numScroll="1" :responsiveOptions="useStore.responsiveOptions" circular :autoplayInterval="3000">
-                        <template #item="slotProps">
-                            <div class="mx-1 flex flex-col items-center">
-                                <Card class="col-span-12 shadow-md mb-2 w-full">
-                                    <template #title>{{ slotProps.data.title }}</template>
-                                    <template #content>
-                                        <Image alt="Image" preview class="z-20">
-                                            <template #previewicon>
-                                                <i class="pi pi-eye text-2xl"></i>
-                                            </template>
-                                            <template #image>
-                                                <div class="w-full flex justify-center">
-                                                    <img :src="this.default.domain + slotProps.data.image" :alt="slotProps.data.image" class="w-full rounded object-cover" />
-                                                </div>
-                                            </template>
-                                            <template #preview>
-                                                <div class="w-full flex justify-center">
-                                                    <img :src="this.default.domain + slotProps.data.image" :alt="slotProps.data.title" @click="slotProps.onClick" class="w-full lg:w-1/2" />
-                                                </div>
-                                            </template>
-                                        </Image>
+            <Carousel :value="useStore.minifa" :numVisible="3" :numScroll="1" :responsiveOptions="useStore.responsiveOptions" circular :autoplayInterval="3000">
+                <template #item="slotProps">
+                    <div class="mx-1 flex flex-col items-center">
+                        <Card class="col-span-12 shadow-md mb-2 w-full">
+                            <template #title>{{ slotProps.data.title }}</template>
+                            <template #content>
+                                <Image alt="Image" preview class="z-20">
+                                    <template #previewicon>
+                                        <i class="pi pi-eye text-2xl"></i>
                                     </template>
-                                </Card>
-                            </div>
-                        </template>
-                    </Carousel>
-                </div>
-            </div>
+                                    <template #image>
+                                        <div class="w-full flex justify-center">
+                                            <img :src="this.default.domain + slotProps.data.image" :alt="slotProps.data.image" class="w-full rounded object-cover" />
+                                        </div>
+                                    </template>
+                                    <template #preview>
+                                        <div class="w-full flex justify-center">
+                                            <img :src="this.default.domain + slotProps.data.image" :alt="slotProps.data.title" @click="slotProps.onClick" class="w-full lg:w-1/2" />
+                                        </div>
+                                    </template>
+                                </Image>
+                            </template>
+                        </Card>
+                    </div>
+                </template>
+            </Carousel>
         </Section>
 
         <Section sectionId="faq" class="grid grid-cols-12 items-center">
@@ -116,7 +86,7 @@
         </Section>
 
         <Section sectionId="keuntungan-mitra">
-            <SectionTitle title="Apa saja yang kalian dapatkan saat berbagung menjadi Mitra ANTRY?" subTitle="ANTRY juga memiliki program reward bagi semua Mitranya. Reward yang kalian bisa dapatkan tergantung dari jumlah pesanan yang kalian order. Bukan hanya itu saja, kalian juga berhak mendapatkan Reward Plus dari ANTRY sesuai dengan ketentuan yang berlaku. Berikut daftar reward dari Produk ANTRY :" />
+            <SectionTitle title="Apa saja yang kalian dapatkan saat bergabung menjadi Mitra ANTRY?" subTitle="ANTRY juga memiliki program reward bagi semua Mitranya. Reward yang kalian bisa dapatkan tergantung dari jumlah pesanan yang kalian order. Bukan hanya itu saja, kalian juga berhak mendapatkan Reward Plus dari ANTRY sesuai dengan ketentuan yang berlaku. Berikut daftar reward dari Produk ANTRY :" />
             <div class="grid grid-cols-12 gap-3">
                 <Card v-for="rewardItem in useStore.rewardItems" :key="rewardItem.title" class="col-span-12 lg:col-span-6 shadow-md">
                     <template #title>
