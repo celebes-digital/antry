@@ -9,9 +9,9 @@
                         <Button label="Daftar Menjadi Mitra" icon="pi pi-whatsapp" severity="success" class="text-white w-fit" size="large"></Button>
                     </a>
                 </div>
-                <div class="col-span-12 lg:col-span-5 flex w-full justify-end order-1 lg:order-2 ">
+                <div class="col-span-12 lg:col-span-5 flex w-full lg:justify-end order-1 lg:order-2 justify-center">
                     <DeferredContent>
-                        <img loading="lazy" :src="this.default.domain + 'logoantry.png'" alt="logo antry">
+                        <img :src="this.default.domain + 'logoantry.webp'" alt="logo antry" height="400" width="400">
                     </DeferredContent>
                 </div>
             </div>
@@ -25,10 +25,10 @@
             <div class="grid grid-cols-12 gap-4">
                 <Card class="col-span-12 lg:col-span-4 shadow-md" v-for="item in useStore.products" :key="item.title">
                     <template #title>
-                        <h4 class="font-bold text-lg text-center pb-4">{{ item.title }}</h4>
+                        <p class="font-bold text-lg text-center pb-4">{{ item.title }}</p>
                     </template>
                     <template #content>
-                        <Image :src="this.default.domain + 'thumbnail-' + item.image" :alt="item.title" class="w-full rounded object-cover" />
+                        <Image :src="this.default.domain + 'thumbnail-' + item.image" :alt="item.title" preview class="max-w-full h-auto rounded object-cover" />
                     </template>
                 </Card>
             </div>
@@ -41,7 +41,7 @@
                 <template #item="slotProps">
                     <div class="mx-1 flex flex-col items-center">
                         <Card class="col-span-12 shadow-md mb-2 w-full">
-                            <template #title><h4 class="text-center">{{ slotProps.data.title }}</h4></template>
+                            <template #title><p class="text-center">{{ slotProps.data.title }}</p></template>
                             <template #content>
                                 <Image alt="Image" preview class="z-20">
                                     <template #previewicon>
@@ -49,12 +49,12 @@
                                     </template>
                                     <template #image>
                                         <div class="w-full flex justify-center">
-                                            <img loading="lazy" :src="this.default.domain + slotProps.data.image" :alt="slotProps.data.image" class="w-full rounded object-cover" />
+                                            <img loading="lazy" :src="this.default.domain + slotProps.data.image" :alt="slotProps.data.image" class="max-w-full h-auto rounded object-cover" />
                                         </div>
                                     </template>
                                     <template #preview>
                                         <div class="w-full flex justify-center">
-                                            <img loading="lazy" :src="this.default.domain + slotProps.data.image" :alt="slotProps.data.title" @click="slotProps.onClick" class="w-full lg:w-1/2" />
+                                            <img loading="lazy" :src="this.default.domain + slotProps.data.image" :alt="slotProps.data.title" @click="slotProps.onClick" class="w-full lg:w-1/2 h-auto" />
                                         </div>
                                     </template>
                                 </Image>
@@ -146,12 +146,12 @@
                                     </template>
                                     <template #image>
                                         <div class="w-full flex justify-center">
-                                            <img loading="lazy" :src="this.default.domain + slotProps.data.image" :alt="slotProps.data.image" class="w-full rounded object-cover" />
+                                            <img loading="lazy" :src="this.default.domain + slotProps.data.image" :alt="slotProps.data.image" class="max-w-full h-auto rounded object-cover" />
                                         </div>
                                     </template>
                                     <template #preview>
                                         <div class="w-full flex justify-center">
-                                            <img loading="lazy" :src="this.default.domain + slotProps.data.image" :alt="slotProps.data.title" @click="slotProps.onClick" class="w-full lg:w-1/2" />
+                                            <img loading="lazy" :src="this.default.domain + slotProps.data.image" :alt="slotProps.data.title" @click="slotProps.onClick" class="w-full lg:w-1/2 h-auto" />
                                         </div>
                                     </template>
                                 </Image>

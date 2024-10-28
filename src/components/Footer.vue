@@ -3,13 +3,13 @@
 		<div class="grid grid-cols-12 items-center bg-white rounded-t-md shadow-md text-gray-700 p-5 pb-2">
 			<div class="col-span-12 lg:col-span-4 flex items-center flex-wrap justify-center">
 				<img :src="this.default.domain + 'logoambema.webp'" alt="logo ambema" width="200" />
-				<img :src="this.default.domain + 'logoantry.png'" alt="logo antry" width="150" class="ml-4" />
+				<img :src="this.default.domain + 'logoantry.webp'" alt="logo antry" width="150" class="ml-4" />
 			</div>
 
 			<div class="col-span-12 lg:col-span-8 grid grid-cols-12 gap-3">
 				<!-- Navigation -->
 				<div class="col-span-12 lg:col-span-6 min-w-0">
-					<h4 class="font-bold text-lg pb-4">Navigasi</h4>
+					<p class="font-bold text-lg pb-4">Navigasi</p>
 					<ul>
 						<li v-for="item in useStore.navItems" :key="item.label">
 							<a :href="item.to" class="break-words">
@@ -21,7 +21,7 @@
 
 				<!-- Product List -->
 				<div class="col-span-12 lg:col-span-6 min-w-0 w-full">
-					<h4 class="font-bold text-lg pb-4">Daftar Produk Antry</h4>
+					<p class="font-bold text-lg pb-4">Daftar Produk Antry</p>
 					<ol class="list-decimal list-inside">
 						<li v-for="item in useStore.products" :key="item.title">
 							<a href="#produk" class="break-words">
