@@ -21,6 +21,10 @@ export const useStore = defineStore('products', {
                     to: '#keuntungan-mitra'
                 },
                 {
+                    label: 'Gallery Kegiatan',
+                    to: '#kegiatan'
+                },
+                {
                     label: 'Keuntungan Member',
                     to: '#keuntungan-member'
                 },

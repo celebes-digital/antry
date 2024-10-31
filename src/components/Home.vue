@@ -103,24 +103,24 @@
                 </Card>
 
                 <SectionTitle class="col-span-12" title="Peraih Reward Umroh Gratis" />
-                <Card class="col-span-6 shadow-md">
+                <Card class="col-span-12 lg:col-span-6 shadow-md">
                     <template #title>
                         <p class="text-center">
-                            Peraih Umroh Gratis 15 April 2024
+                            Peraih Reward Umroh Gratis 15 April 2024
                         </p>
                     </template>
                     <template #content>
-                        <img :src="this.default.domain + 'reward-1.webp'" alt="">
+                        <Image class="h-auto lg:h-96 w-full justify-center" loading="lazy" :src="this.default.domain + 'reward-1.webp'" alt="reward umroh" preview />
                     </template>
                 </Card>
-                <Card class="col-span-6 shadow-md">
+                <Card class="col-span-12 lg:col-span-6 shadow-md">
                     <template #title>
                         <p class="text-center">
-                            Peraih Umroh Gratis 20 Oktober 2024
+                            Peraih Reward Umroh Gratis 20 Oktober 2024
                         </p>
                     </template>
                     <template #content>
-                        <img :src="this.default.domain + 'reward-2.webp'" alt="">
+                        <Image class="h-auto lg:h-96 w-full justify-center" loading="lazy" :src="this.default.domain + 'reward-2.webp'" alt="reward umroh" preview />
                     </template>
                 </Card>
             </div>
@@ -175,7 +175,7 @@
             <Card class="col-span-12 shadow-md">
                 <template #content>
                     <div class="flex flex-col items-center w-full py-5">
-                        <h2 class="text-2xl font-semibold pb-5">Tunggu Apalagi Daftar Menjadi Mitra ANTRY Sekarang Juga</h2>
+                        <h2 class="pb-5 text-center font-bold text-4xl w-full lg:w-8/12">Tunggu Apalagi Daftar Menjadi Mitra ANTRY Sekarang Juga</h2>
                         <a href="https://wa.me/6285191542597">
                             <Button label="Daftar Sekarang" icon="pi pi-whatsapp" severity="success" class="text-white" ></Button>
                         </a>
@@ -190,9 +190,9 @@
                 <template #item="slotProps">
                     <div class="mx-1 flex flex-col items-center">
                         <Card class="col-span-12 shadow-md mb-2 w-full">
+                            <template #title><p class="text-center">{{ slotProps.data.title }}</p></template>
                             <template #content>
-                                <!-- <img loading="lazy" :src="this.default.domain + 'thumbnail-' + slotProps.data.image" :alt="slotProps.data.image" class="w-full h-[350px] rounded object-cover" /> -->
-                                <Image alt="Image" preview class="z-20">
+                                <Image alt="Gambar Testimoni" preview class="z-20">
                                     <template #previewicon>
                                         <i class="pi pi-eye text-2xl"></i>
                                     </template>

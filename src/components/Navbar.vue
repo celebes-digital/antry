@@ -1,11 +1,11 @@
 <template>
 
-	<nav class="z-10 h-20 w-full fixed p-5 lg:px-20 flex justify-between items-center shadow-md bg-white transition-all ease-in-out">
+	<nav class="z-10 h-20 w-full fixed p-5 xl:px-20 flex justify-between items-center shadow-md bg-white transition-all ease-in-out">
 		<a href="#home">
 			<img height="80" width="80" src="https://antryofficial.com/logoantry.webp" alt="Logo Antry">
 		</a>
 
-		<div class="hidden lg:flex gap-10">
+		<div class="hidden xl:flex gap-10">
 			<a 
 				v-for="item in useStore.navItems" 
 				:key="item.label" 
@@ -17,8 +17,8 @@
 		</div>
 
 		<div class="flex">
-			<a href="#daftar" class="bg-orange-500 p-4 hidden lg:flex rounded-full text-white text-center border-2 border-white hover:bg-white hover:border-orange-500 hover:text-orange-500 ease-in-out transition-all">Daftar Sebagai Mitra</a>
-			<Button class="flex lg:hidden" icon="pi pi-bars" aria-label="Navigation Button" @click="openPosition('topright')"  />
+			<a href="#daftar" class="bg-orange-500 p-4 hidden xl:flex rounded-full text-white text-center border-2 border-white hover:bg-white hover:border-orange-500 hover:text-orange-500 ease-in-out transition-all">Daftar Sebagai Mitra</a>
+			<Button class="flex xl:hidden" icon="pi pi-bars" aria-label="Navigation Button" @click="openPosition('topright')"  />
 		</div>
 	</nav>
 
