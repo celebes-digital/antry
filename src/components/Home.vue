@@ -1,5 +1,5 @@
 <template>
-    <div id="hero" class="bg-orange-50 scroll-m-20">
+    <div id="hero" class="h-dvh lg:h-auto bg-orange-50 scroll-m-20">
         <Container>
             <div class="grid grid-cols-12 pb-10">
                 <div class="col-span-12 lg:col-span-7 flex flex-col items-center text-center lg:text-left lg:items-start justify-center px-2 lg:pe-20 order-2 lg:order-1">
@@ -101,6 +101,28 @@
                         </div>
                     </template>
                 </Card>
+
+                <SectionTitle class="col-span-12" title="Peraih Reward Umroh Gratis" />
+                <Card class="col-span-6 shadow-md">
+                    <template #title>
+                        <p class="text-center">
+                            Peraih Umroh Gratis 15 April 2024
+                        </p>
+                    </template>
+                    <template #content>
+                        <img :src="this.default.domain + 'reward-1.webp'" alt="">
+                    </template>
+                </Card>
+                <Card class="col-span-6 shadow-md">
+                    <template #title>
+                        <p class="text-center">
+                            Peraih Umroh Gratis 20 Oktober 2024
+                        </p>
+                    </template>
+                    <template #content>
+                        <img :src="this.default.domain + 'reward-2.webp'" alt="">
+                    </template>
+                </Card>
             </div>
         </Section>
 
@@ -116,6 +138,36 @@
                     </template>
                 </Card>
             </div>
+        </Section>
+
+        <Section sectionId="kegiatan">
+            <SectionTitle title="Silaturahim Bersama Mitra ANTRY" subTitle="Kegitan workshop bisnis dan meet & greet di berbagai daerah." />
+            <Carousel :value="useStore.kegiatanItems" :numVisible="3" :numScroll="1" :responsiveOptions="useStore.responsiveOptions" circular :autoplayInterval="3000">
+                <template #item="slotProps">
+                    <div class="mx-1 flex flex-col items-center">
+                        <Card class="col-span-12 shadow-md mb-2 w-full">
+                            <template #content>
+                                <!-- <img loading="lazy" :src="this.default.domain + 'thumbnail-' + slotProps.data.image" :alt="slotProps.data.image" class="w-full h-[350px] rounded object-cover" /> -->
+                                <Image alt="Image" preview class="z-20">
+                                    <template #previewicon>
+                                        <i class="pi pi-eye text-2xl"></i>
+                                    </template>
+                                    <template #image>
+                                        <div class="w-full flex justify-center">
+                                            <img loading="lazy" :src="this.default.domain + slotProps.data.image" :alt="slotProps.data.image" class="max-w-full h-auto rounded object-cover" />
+                                        </div>
+                                    </template>
+                                    <template #preview>
+                                        <div class="w-full flex justify-center">
+                                            <img loading="lazy" :src="this.default.domain + slotProps.data.image" :alt="slotProps.data.title" @click="slotProps.onClick" class="w-full lg:w-1/2 h-auto" />
+                                        </div>
+                                    </template>
+                                </Image>
+                            </template>
+                        </Card>
+                    </div>
+                </template>
+            </Carousel>
         </Section>
 
         <Section sectionId="daftar">

@@ -179,6 +179,13 @@ export const useStore = defineStore('products', {
                 { image: 'testimoni-7.webp' },
                 { image: 'testimoni-8.webp' },
             ],
+            kegiatanItems: [
+                { image: 'kegiatan-1.webp' },
+                { image: 'kegiatan-2.webp' },
+                { image: 'kegiatan-3.webp' },
+                { image: 'kegiatan-4.webp' },
+                { image: 'kegiatan-5.webp' },
+            ],
             memberItems: [
                 {
                     title: '1. Semua Produk ANTRY sudah Terdaftar dan memiliki Izin Edar atau BPOM',
