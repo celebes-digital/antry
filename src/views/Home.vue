@@ -5,10 +5,11 @@
                 <div class="col-span-12 lg:col-span-7 flex flex-col items-center text-center lg:text-left lg:items-start justify-center px-2 lg:pe-20 order-2 lg:order-1">
                     <p class="text-xl font-normal  text-gray-700">{{ useStore.about.subTitle }}</p>
                     <h1 class="text-2xl font-semibold text-gray-700 mb-4">{{ useStore.about.description }}</h1>
-                    <a href="https://wa.me/6285191542597">
+                    <a :href="'https://wa.me/' + nomor" target="_blank">
                         <Button label="Daftar Menjadi Mitra" icon="pi pi-whatsapp" severity="success" class="text-white w-fit" size="large"></Button>
                     </a>
                 </div>
+                <!-- {{nomor + 'aa' + $route.fullPath}} -->
                 <div class="col-span-12 lg:col-span-5 flex w-full lg:justify-end order-1 lg:order-2 justify-center">
                     <DeferredContent>
                         <img :src="this.default.domain + 'logoantry.webp'" alt="logo antry" height="400" width="400">
@@ -176,7 +177,7 @@
                 <template #content>
                     <div class="flex flex-col items-center w-full py-5">
                         <h2 class="pb-5 text-center font-bold text-4xl w-full lg:w-8/12">Tunggu Apalagi Daftar Menjadi Mitra ANTRY Sekarang Juga</h2>
-                        <a href="https://wa.me/6285191542597">
+                        <a :href="'https://wa.me/' + nomor" target="_blank">
                             <Button label="Daftar Sekarang" icon="pi pi-whatsapp" severity="success" class="text-white" ></Button>
                         </a>
                     </div>
@@ -214,6 +215,8 @@
             </Carousel>
         </Section>
     </Container>
+
+    <Footer />
 </template>
 
 <script>
@@ -224,8 +227,18 @@ export default {
     data() {
         return {
             useStore: useStore(),
+            nomor: '',
         };
     },
+    methods: {
+        getNomor() {
+            this.nomor = this.$route.query.nomor || "6285191542597";
+        }
+    },
+    mounted() {
+        this.getNomor();
+        console.log("Nomor:", this.nomor)
+    }
 }
 </script>
 

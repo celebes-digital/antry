@@ -6,8 +6,7 @@
 	<Navbar />
 	
 	<main class="relative top-20">
-		<Home />
-		<Footer />
+		<RouterView></RouterView>
 	</main>
 
 	<ScrollTop />
